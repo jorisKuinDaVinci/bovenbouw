@@ -15,13 +15,13 @@ namespace PokemonBattleSimulator
             Nickname = nickname;
         }
 
-        // Method for battle cry
+        // battle cry
         public void BattleCry()
         {
             Console.WriteLine(Nickname + "! " + Nickname + "!");
         }
 
-        // Method to rename Charmander
+        // rename Charmander
         public void Rename(string newName)
         {
             if (newName != "")
