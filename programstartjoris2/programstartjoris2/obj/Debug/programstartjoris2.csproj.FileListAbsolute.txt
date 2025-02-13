@@ -1,0 +1,7 @@
+C:\school\programstartjoris2\programstartjoris2\bin\Debug\programstartjoris2.exe.config
+C:\school\programstartjoris2\programstartjoris2\bin\Debug\programstartjoris2.exe
+C:\school\programstartjoris2\programstartjoris2\bin\Debug\programstartjoris2.pdb
+C:\school\programstartjoris2\programstartjoris2\obj\Debug\programstartjoris2.csproj.AssemblyReference.cache
+C:\school\programstartjoris2\programstartjoris2\obj\Debug\programstartjoris2.csproj.CoreCompileInputs.cache
+C:\school\programstartjoris2\programstartjoris2\obj\Debug\programstartjoris2.exe
+C:\school\programstartjoris2\programstartjoris2\obj\Debug\programstartjoris2.pdb

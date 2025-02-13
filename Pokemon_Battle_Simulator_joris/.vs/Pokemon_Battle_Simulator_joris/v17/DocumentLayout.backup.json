@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator_joris\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{26E98108-5320-46AE-96B0-46441298D7CB}|Pokemon_Battle_Simulator_joris\\Pokemon_Battle_Simulator_joris.csproj|c:\\school\\code\\bovenbouw\\pokemon_battle_simulator_joris\\pokemon_battle_simulator_joris\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26E98108-5320-46AE-96B0-46441298D7CB}|Pokemon_Battle_Simulator_joris\\Pokemon_Battle_Simulator_joris.csproj|solutionrelative:pokemon_battle_simulator_joris\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator_joris\\Pokemon_Battle_Simulator_joris\\Program.cs",
+              "RelativeDocumentMoniker": "Pokemon_Battle_Simulator_joris\\Program.cs",
+              "ToolTip": "C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator_joris\\Pokemon_Battle_Simulator_joris\\Program.cs",
+              "RelativeToolTip": "Pokemon_Battle_Simulator_joris\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T12:14:40.168Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+C:\school\Openbaar_Vervoer\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\school\Openbaar_Vervoer\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\school\Openbaar_Vervoer\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\school\Openbaar_Vervoer\ConsoleApp1\obj\Debug\program.cs.csproj.AssemblyReference.cache
+C:\school\Openbaar_Vervoer\ConsoleApp1\obj\Debug\program.cs.csproj.CoreCompileInputs.cache
+C:\school\Openbaar_Vervoer\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\school\Openbaar_Vervoer\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
