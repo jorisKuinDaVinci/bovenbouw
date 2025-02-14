@@ -37,7 +37,7 @@ namespace PokemonBattleSimulator
 
     class Program
     {
-        static void Main()
+        public static void Main()
         {
             // 1. The player starts the game.
             Console.WriteLine("Welcome to the Pokémon battle simulator!");
