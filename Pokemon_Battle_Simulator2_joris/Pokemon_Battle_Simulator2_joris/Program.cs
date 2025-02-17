@@ -4,8 +4,6 @@ namespace Pokemon_Battle_Simulator2_joris
 {
     public class Charmander
     {
-        public bool field = false;
-        public bool constructor = true;
         public string nickname;
         public string strength = "fire";
         public string weakness = "water";
