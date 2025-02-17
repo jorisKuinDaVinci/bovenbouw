@@ -16,9 +16,9 @@ namespace PokemonBattleSimulator
         }
 
         //battle cry
-        public void BattleCry()
+        public string BattleCry()
         {
-            Console.WriteLine(Nickname + "! " + Nickname + "!");
+            return Nickname + "! " + Nickname + "!";
         }
 
         //rename Charmander
@@ -52,7 +52,7 @@ namespace PokemonBattleSimulator
                 //The Charmander does its battle cry ten times.
                 for (int i = 0; i < 10; i++)
                 {
-                    charmander.BattleCry();
+                    Console.WriteLine(charmander.BattleCry());
                 }
 
                 //The player can give a new name to the same Charmander.
