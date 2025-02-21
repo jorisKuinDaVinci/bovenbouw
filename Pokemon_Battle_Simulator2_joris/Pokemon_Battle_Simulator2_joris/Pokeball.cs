@@ -21,7 +21,7 @@ namespace Pokemon_Battle_Simulator2_joris
             else
             {
                 Console.WriteLine("You threw the Pokeball! A " + containedPokemon.nickname + " appears!");
-                Console.WriteLine(containedPokemon.BattleCry()); // Charmander battle cry
+                Console.WriteLine(containedPokemon.BattleCry()); //Charmander battle cry
                 inBall = false;
             }
         }

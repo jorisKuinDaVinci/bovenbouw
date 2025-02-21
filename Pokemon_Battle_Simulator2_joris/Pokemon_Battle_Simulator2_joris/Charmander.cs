@@ -18,7 +18,7 @@ namespace Pokemon_Battle_Simulator2_joris
             Console.WriteLine("Charmander " + nickname + ": Strength = " + strength + ", Weakness = " + weakness);
         }
 
-        // Battle cry
+        //Battle cry
         public string BattleCry()
         {
             return nickname + "! " + nickname + "!";
