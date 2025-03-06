@@ -27,6 +27,9 @@ h2 {
     color: #16a085;
     /* kleur is 16a085 */
 }
+.innovation h4 {
+    color: green;
+}
 .answer {
     font-size: 1.1em;
 }
