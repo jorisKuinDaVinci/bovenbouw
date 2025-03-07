@@ -2,24 +2,14 @@
 
 namespace Pokemon_Battle_Simulator3_joris
 {
-    public class Charmander
+    public class Charmander : Pokemon
     {
-        public string nickname;
-        public string strength = "fire";
-        public string weakness = "water";
-
-        public Charmander(string nickname)
+        public Charmander(string nickname) : base(nickname, "fire", "water")
         {
-            this.nickname = nickname;
         }
 
-        public void ShowInfo()
-        {
-            Console.WriteLine("Charmander " + nickname + ": Strength = " + strength + ", Weakness = " + weakness);
-        }
-
-        //Battle cry
-        public string BattleCry()
+        // Overriding the BattleCry method
+        public override string BattleCry()
         {
             return nickname + "! " + nickname + "!";
         }
