@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\school\\Pokemon_Battle_Simulator3_joris\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{30EC3847-89BF-4028-885C-98377A08C4EC}|Pokemon_Battle_Simulator3_joris\\Pokemon_Battle_Simulator3_joris.csproj|c:\\school\\pokemon_battle_simulator3_joris\\pokemon_battle_simulator3_joris\\trainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30EC3847-89BF-4028-885C-98377A08C4EC}|Pokemon_Battle_Simulator3_joris\\Pokemon_Battle_Simulator3_joris.csproj|solutionrelative:pokemon_battle_simulator3_joris\\trainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30EC3847-89BF-4028-885C-98377A08C4EC}|Pokemon_Battle_Simulator3_joris\\Pokemon_Battle_Simulator3_joris.csproj|c:\\school\\pokemon_battle_simulator3_joris\\pokemon_battle_simulator3_joris\\pokeball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30EC3847-89BF-4028-885C-98377A08C4EC}|Pokemon_Battle_Simulator3_joris\\Pokemon_Battle_Simulator3_joris.csproj|solutionrelative:pokemon_battle_simulator3_joris\\pokeball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30EC3847-89BF-4028-885C-98377A08C4EC}|Pokemon_Battle_Simulator3_joris\\Pokemon_Battle_Simulator3_joris.csproj|c:\\school\\pokemon_battle_simulator3_joris\\pokemon_battle_simulator3_joris\\charmander.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30EC3847-89BF-4028-885C-98377A08C4EC}|Pokemon_Battle_Simulator3_joris\\Pokemon_Battle_Simulator3_joris.csproj|solutionrelative:pokemon_battle_simulator3_joris\\charmander.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30EC3847-89BF-4028-885C-98377A08C4EC}|Pokemon_Battle_Simulator3_joris\\Pokemon_Battle_Simulator3_joris.csproj|c:\\school\\pokemon_battle_simulator3_joris\\pokemon_battle_simulator3_joris\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30EC3847-89BF-4028-885C-98377A08C4EC}|Pokemon_Battle_Simulator3_joris\\Pokemon_Battle_Simulator3_joris.csproj|solutionrelative:pokemon_battle_simulator3_joris\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Trainer.cs",
+              "DocumentMoniker": "C:\\school\\Pokemon_Battle_Simulator3_joris\\Pokemon_Battle_Simulator3_joris\\Trainer.cs",
+              "RelativeDocumentMoniker": "Pokemon_Battle_Simulator3_joris\\Trainer.cs",
+              "ToolTip": "C:\\school\\Pokemon_Battle_Simulator3_joris\\Pokemon_Battle_Simulator3_joris\\Trainer.cs",
+              "RelativeToolTip": "Pokemon_Battle_Simulator3_joris\\Trainer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T08:22:29.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pokeball.cs",
+              "DocumentMoniker": "C:\\school\\Pokemon_Battle_Simulator3_joris\\Pokemon_Battle_Simulator3_joris\\Pokeball.cs",
+              "RelativeDocumentMoniker": "Pokemon_Battle_Simulator3_joris\\Pokeball.cs",
+              "ToolTip": "C:\\school\\Pokemon_Battle_Simulator3_joris\\Pokemon_Battle_Simulator3_joris\\Pokeball.cs",
+              "RelativeToolTip": "Pokemon_Battle_Simulator3_joris\\Pokeball.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T08:22:03.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Charmander.cs",
+              "DocumentMoniker": "C:\\school\\Pokemon_Battle_Simulator3_joris\\Pokemon_Battle_Simulator3_joris\\Charmander.cs",
+              "RelativeDocumentMoniker": "Pokemon_Battle_Simulator3_joris\\Charmander.cs",
+              "ToolTip": "C:\\school\\Pokemon_Battle_Simulator3_joris\\Pokemon_Battle_Simulator3_joris\\Charmander.cs",
+              "RelativeToolTip": "Pokemon_Battle_Simulator3_joris\\Charmander.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T08:21:26.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\school\\Pokemon_Battle_Simulator3_joris\\Pokemon_Battle_Simulator3_joris\\Program.cs",
+              "RelativeDocumentMoniker": "Pokemon_Battle_Simulator3_joris\\Program.cs",
+              "ToolTip": "C:\\school\\Pokemon_Battle_Simulator3_joris\\Pokemon_Battle_Simulator3_joris\\Program.cs",
+              "RelativeToolTip": "Pokemon_Battle_Simulator3_joris\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T08:20:36.88Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
