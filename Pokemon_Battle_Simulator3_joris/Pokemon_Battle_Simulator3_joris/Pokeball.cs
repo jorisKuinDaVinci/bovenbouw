@@ -5,9 +5,9 @@ namespace Pokemon_Battle_Simulator3_joris
     public class Pokeball
     {
         public bool inBall = true;
-        public Charmander containedPokemon;
+        public Pokemon containedPokemon;
 
-        public Pokeball(Charmander pokemon)
+        public Pokeball(Pokemon pokemon)
         {
             containedPokemon = pokemon;
         }
@@ -21,7 +21,7 @@ namespace Pokemon_Battle_Simulator3_joris
             else
             {
                 Console.WriteLine("You threw the Pokeball! A " + containedPokemon.nickname + " appears!");
-                Console.WriteLine(containedPokemon.BattleCry()); //Charmander battle cry
+                Console.WriteLine(containedPokemon.BattleCry()); // Pokémon battle cry
                 inBall = false;
             }
         }

@@ -12,10 +12,13 @@ namespace Pokemon_Battle_Simulator3_joris
         {
             this.name = name;
 
-            for (int i = 1; i <= 6; i++)
-            {
-                belt.Add(new Pokeball(new Charmander("Charmander" + i)));
-            }
+            // Adding two of each Pokémon type to the belt
+            belt.Add(new Pokeball(new Charmander("Charmander1")));
+            belt.Add(new Pokeball(new Charmander("Charmander2")));
+            belt.Add(new Pokeball(new Squirtle("Squirtle1")));
+            belt.Add(new Pokeball(new Squirtle("Squirtle2")));
+            belt.Add(new Pokeball(new Bulbasaur("Bulbasaur1")));
+            belt.Add(new Pokeball(new Bulbasaur("Bulbasaur2")));
         }
 
         public void ThrowPokeball(int index)
