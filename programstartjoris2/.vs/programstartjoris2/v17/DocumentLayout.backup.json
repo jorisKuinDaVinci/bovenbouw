@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{2C7EC99B-4F56-415B-A92C-4E2ABC72E718}|programstartjoris2\\programstartjoris2.csproj|solutionrelative:programstartjoris2\\train.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C7EC99B-4F56-415B-A92C-4E2ABC72E718}|programstartjoris2\\programstartjoris2.csproj|C:\\school\\code\\bovenbouw\\programstartjoris2\\programstartjoris2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C7EC99B-4F56-415B-A92C-4E2ABC72E718}|programstartjoris2\\programstartjoris2.csproj|solutionrelative:programstartjoris2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2C7EC99B-4F56-415B-A92C-4E2ABC72E718}|programstartjoris2\\programstartjoris2.csproj|C:\\school\\code\\bovenbouw\\programstartjoris2\\programstartjoris2\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C7EC99B-4F56-415B-A92C-4E2ABC72E718}|programstartjoris2\\programstartjoris2.csproj|solutionrelative:programstartjoris2\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C7EC99B-4F56-415B-A92C-4E2ABC72E718}|programstartjoris2\\programstartjoris2.csproj|C:\\school\\code\\bovenbouw\\programstartjoris2\\programstartjoris2\\vervoersmiddel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C7EC99B-4F56-415B-A92C-4E2ABC72E718}|programstartjoris2\\programstartjoris2.csproj|solutionrelative:programstartjoris2\\vervoersmiddel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C7EC99B-4F56-415B-A92C-4E2ABC72E718}|programstartjoris2\\programstartjoris2.csproj|C:\\school\\code\\bovenbouw\\programstartjoris2\\programstartjoris2\\tram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C7EC99B-4F56-415B-A92C-4E2ABC72E718}|programstartjoris2\\programstartjoris2.csproj|solutionrelative:programstartjoris2\\tram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C7EC99B-4F56-415B-A92C-4E2ABC72E718}|programstartjoris2\\programstartjoris2.csproj|C:\\school\\code\\bovenbouw\\programstartjoris2\\programstartjoris2\\vervoersmiddel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C7EC99B-4F56-415B-A92C-4E2ABC72E718}|programstartjoris2\\programstartjoris2.csproj|solutionrelative:programstartjoris2\\vervoersmiddel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C7EC99B-4F56-415B-A92C-4E2ABC72E718}|programstartjoris2\\programstartjoris2.csproj|C:\\school\\code\\bovenbouw\\programstartjoris2\\programstartjoris2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C7EC99B-4F56-415B-A92C-4E2ABC72E718}|programstartjoris2\\programstartjoris2.csproj|solutionrelative:programstartjoris2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,14 +40,14 @@
               "RelativeDocumentMoniker": "programstartjoris2\\Train.cs",
               "ToolTip": "C:\\school\\code\\bovenbouw\\programstartjoris2\\programstartjoris2\\Train.cs",
               "RelativeToolTip": "programstartjoris2\\Train.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwA8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T09:14:48.233Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Person.cs",
               "DocumentMoniker": "C:\\school\\code\\bovenbouw\\programstartjoris2\\programstartjoris2\\Person.cs",
               "RelativeDocumentMoniker": "programstartjoris2\\Person.cs",
@@ -55,19 +55,21 @@
               "RelativeToolTip": "programstartjoris2\\Person.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T09:13:42.14Z"
+              "WhenOpened": "2025-03-04T09:13:42.14Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Vervoersmiddel.cs",
               "DocumentMoniker": "C:\\school\\code\\bovenbouw\\programstartjoris2\\programstartjoris2\\Vervoersmiddel.cs",
               "RelativeDocumentMoniker": "programstartjoris2\\Vervoersmiddel.cs",
               "ToolTip": "C:\\school\\code\\bovenbouw\\programstartjoris2\\programstartjoris2\\Vervoersmiddel.cs",
               "RelativeToolTip": "programstartjoris2\\Vervoersmiddel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T08:52:54.322Z"
+              "WhenOpened": "2025-03-04T08:52:54.322Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -79,11 +81,12 @@
               "RelativeToolTip": "programstartjoris2\\Tram.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T08:48:49.988Z"
+              "WhenOpened": "2025-03-04T08:48:49.988Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\school\\code\\bovenbouw\\programstartjoris2\\programstartjoris2\\Program.cs",
               "RelativeDocumentMoniker": "programstartjoris2\\Program.cs",
@@ -91,7 +94,8 @@
               "RelativeToolTip": "programstartjoris2\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T11:03:21.861Z"
+              "WhenOpened": "2025-02-11T11:03:21.861Z",
+              "EditorCaption": ""
             }
           ]
         }
