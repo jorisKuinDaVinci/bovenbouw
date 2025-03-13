@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pokemon_Battle_Simulator4_joris
 {
-    class Battle
+    public class Battle
     {
     }
 }

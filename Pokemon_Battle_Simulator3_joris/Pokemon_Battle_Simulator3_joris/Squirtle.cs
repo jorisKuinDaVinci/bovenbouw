@@ -4,9 +4,7 @@ namespace Pokemon_Battle_Simulator3_joris
 {
     public class Squirtle : Pokemon
     {
-        public Squirtle(string nickname) : base(nickname, "water", "leaf")
-        {
-        }
+        public Squirtle(string nickname) : base(nickname, "water", "leaf") { }
 
         // Overriding the BattleCry method
         public override string BattleCry()

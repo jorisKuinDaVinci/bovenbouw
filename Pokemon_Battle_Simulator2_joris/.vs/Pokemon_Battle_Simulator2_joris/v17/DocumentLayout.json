@@ -36,9 +36,10 @@
               "RelativeDocumentMoniker": "Pokemon_Battle_Simulator2_joris\\Trainer.cs",
               "ToolTip": "C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator2_joris\\Pokemon_Battle_Simulator2_joris\\Trainer.cs",
               "RelativeToolTip": "Pokemon_Battle_Simulator2_joris\\Trainer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T12:30:30.28Z"
+              "WhenOpened": "2025-02-20T12:30:30.28Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -50,7 +51,8 @@
               "RelativeToolTip": "Pokemon_Battle_Simulator2_joris\\Pokeball.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T12:22:26.398Z"
+              "WhenOpened": "2025-02-20T12:22:26.398Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -60,7 +62,7 @@
               "RelativeDocumentMoniker": "Pokemon_Battle_Simulator2_joris\\Charmander.cs",
               "ToolTip": "C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator2_joris\\Pokemon_Battle_Simulator2_joris\\Charmander.cs",
               "RelativeToolTip": "Pokemon_Battle_Simulator2_joris\\Charmander.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-20T12:20:07.743Z",
               "EditorCaption": ""
@@ -73,9 +75,10 @@
               "RelativeDocumentMoniker": "Pokemon_Battle_Simulator2_joris\\Program.cs",
               "ToolTip": "C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator2_joris\\Pokemon_Battle_Simulator2_joris\\Program.cs",
               "RelativeToolTip": "Pokemon_Battle_Simulator2_joris\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwBQAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T09:04:26.969Z"
+              "WhenOpened": "2025-02-14T09:04:26.969Z",
+              "EditorCaption": ""
             }
           ]
         }
