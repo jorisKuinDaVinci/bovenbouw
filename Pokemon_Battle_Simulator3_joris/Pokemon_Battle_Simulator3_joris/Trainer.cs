@@ -23,7 +23,7 @@ namespace Pokemon_Battle_Simulator3_joris
 
         public string GetPokemonNickname(string species)
         {
-            Console.Write($"Voer een nickname in voor {species}: ");
+            Console.Write("Voer een nickname in voor " + species + ": ");
             return Console.ReadLine();
         }
 

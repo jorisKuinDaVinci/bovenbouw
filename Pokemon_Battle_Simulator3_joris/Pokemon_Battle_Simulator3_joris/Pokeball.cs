@@ -21,7 +21,6 @@ namespace Pokemon_Battle_Simulator3_joris
             else
             {
                 Console.WriteLine("You threw the Pokeball! " + containedPokemon.nickname + " appears!");
-                Console.WriteLine(containedPokemon.BattleCry());
                 inBall = false;
             }
         }
