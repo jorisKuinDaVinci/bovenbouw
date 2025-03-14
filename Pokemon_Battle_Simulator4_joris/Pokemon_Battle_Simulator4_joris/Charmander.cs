@@ -4,9 +4,7 @@ namespace Pokemon_Battle_Simulator4_joris
 {
     public class Charmander : Pokemon
     {
-        public Charmander(string nickname) : base(nickname, "fire", "water")
-        {
-        }
+        public Charmander(string nickname) : base(nickname, "fire", "water") { }
 
         // Overriding the BattleCry method
         public override string BattleCry()

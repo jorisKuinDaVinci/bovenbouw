@@ -20,8 +20,8 @@ namespace Pokemon_Battle_Simulator4_joris
             }
             else
             {
-                Console.WriteLine("You threw the Pokeball! A " + containedPokemon.nickname + " appears!");
-                Console.WriteLine(containedPokemon.BattleCry()); // Pokémon battle cry
+                Console.WriteLine("You threw the Pokeball! " + containedPokemon.nickname + " appears!");
+                Console.WriteLine(containedPokemon.BattleCry());
                 inBall = false;
             }
         }
@@ -30,7 +30,7 @@ namespace Pokemon_Battle_Simulator4_joris
         {
             if (!inBall)
             {
-                Console.WriteLine("The " + containedPokemon.nickname + " returns to its Pokeball. The lid closes up.");
+                Console.WriteLine(containedPokemon.nickname + " returns to its Pokeball. The lid closes up.");
                 inBall = true;
             }
             else

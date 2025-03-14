@@ -11,14 +11,21 @@ namespace Pokemon_Battle_Simulator4_joris
         public Trainer(string name)
         {
             this.name = name;
+            Console.WriteLine(name + ", geef je Pokémon een nickname!");
 
             // Adding two of each Pokémon type to the belt
-            belt.Add(new Pokeball(new Charmander("Charmander1")));
-            belt.Add(new Pokeball(new Charmander("Charmander2")));
-            belt.Add(new Pokeball(new Squirtle("Squirtle1")));
-            belt.Add(new Pokeball(new Squirtle("Squirtle2")));
-            belt.Add(new Pokeball(new Bulbasaur("Bulbasaur1")));
-            belt.Add(new Pokeball(new Bulbasaur("Bulbasaur2")));
+            belt.Add(new Pokeball(new Charmander(GetPokemonNickname("Charmander"))));
+            belt.Add(new Pokeball(new Charmander(GetPokemonNickname("Charmander"))));
+            belt.Add(new Pokeball(new Squirtle(GetPokemonNickname("Squirtle"))));
+            belt.Add(new Pokeball(new Squirtle(GetPokemonNickname("Squirtle"))));
+            belt.Add(new Pokeball(new Bulbasaur(GetPokemonNickname("Bulbasaur"))));
+            belt.Add(new Pokeball(new Bulbasaur(GetPokemonNickname("Bulbasaur"))));
+        }
+
+        public string GetPokemonNickname(string species)
+        {
+            Console.Write($"Voer een nickname in voor {species}: ");
+            return Console.ReadLine();
         }
 
         public void ThrowPokeball(int index)
