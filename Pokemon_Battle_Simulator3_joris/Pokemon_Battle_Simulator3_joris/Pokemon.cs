@@ -20,9 +20,9 @@ namespace Pokemon_Battle_Simulator3_joris
             Console.WriteLine(nickname + ": Strength = " + strength + ", Weakness = " + weakness);
         }
 
-        public void BattleCry()
+        public string BattleCry()
         {
-            Console.WriteLine(nickname + "! " + nickname + "!");
+            return nickname + "! " + nickname + "!";
         }
     }
 }

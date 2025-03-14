@@ -6,7 +6,7 @@ namespace Pokemon_Battle_Simulator3_joris
     {
         public Charmander(string nickname) : base(nickname, "fire", "water")
         {
-            BattleCry();
+            Console.WriteLine(BattleCry());
         }
     }
 }

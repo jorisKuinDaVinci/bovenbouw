@@ -6,7 +6,7 @@ namespace Pokemon_Battle_Simulator3_joris
     {
         public Squirtle(string nickname) : base(nickname, "water", "leaf")
         {
-            BattleCry();
+            Console.WriteLine(BattleCry());
         }
     }
 }

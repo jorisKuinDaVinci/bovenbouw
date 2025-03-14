@@ -20,7 +20,9 @@ namespace Pokemon_Battle_Simulator4_joris
             Console.WriteLine(nickname + ": Strength = " + strength + ", Weakness = " + weakness);
         }
 
-        // Abstract battle cry method
-        public abstract string BattleCry();
+        public string BattleCry()
+        {
+            return nickname + "! " + nickname + "!";
+        }
     }
 }

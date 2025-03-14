@@ -6,7 +6,7 @@ namespace Pokemon_Battle_Simulator3_joris
     {
         public Bulbasaur(string nickname) : base(nickname, "grass", "fire")
         {
-            BattleCry();
+            Console.WriteLine(BattleCry());
         }
     }
 }
