@@ -21,23 +21,12 @@ namespace Pokemon_Battle_Simulator4_joris
                 string trainerName2 = Console.ReadLine();
                 Trainer trainer2 = new Trainer(trainerName2);
 
-                Console.WriteLine("\n--- The battle begins! ---\n");
+                // Create and start the battle in the arena
+                Arena arena = new Arena();
+                arena.StartBattle(trainer1, trainer2);
 
-                for (int i = 0; i < 6; i++)
-                {
-                    Console.WriteLine("Round " + (i + 1) + ":");
-
-                    trainer1.ThrowPokeball(i);
-                    trainer2.ThrowPokeball(i);
-
-                    trainer1.ReturnPokemon(i);
-                    trainer2.ReturnPokemon(i);
-
-                    Console.WriteLine("\nPress Enter to continue to the next round...");
-                    Console.ReadLine();
-                }
-
-                Console.WriteLine("\n--- All Pokémon have battled! ---");
+                // Show battle results and score
+                arena.ShowScore();
 
                 Console.WriteLine("\nWould you like to play again? (y/n)");
                 string choice = Console.ReadLine().ToLower();
