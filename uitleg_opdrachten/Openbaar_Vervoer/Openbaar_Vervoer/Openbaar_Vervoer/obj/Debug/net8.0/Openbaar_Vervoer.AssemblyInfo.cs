@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Openbaar_Vervoer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83b5e53b9e57d9c866b4193ac6c0be6bce852670")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e884b3f3ea6b373bbcedcee6f72adcb82763d95")]
 [assembly: System.Reflection.AssemblyProductAttribute("Openbaar_Vervoer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Openbaar_Vervoer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

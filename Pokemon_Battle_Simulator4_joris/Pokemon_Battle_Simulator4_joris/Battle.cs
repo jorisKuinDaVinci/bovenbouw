@@ -47,7 +47,6 @@ namespace Pokemon_Battle_Simulator4_joris
                 trainer2.ThrowPokeball(index2);
                 pokemon2 = trainer2.belt[index2].containedPokemon;
 
-                // Battle logic with multiple if statements instead of &&
                 if (pokemon1.strength == "fire")
                 {
                     if (pokemon2.strength == "grass")

@@ -23,7 +23,9 @@
             tram2.doCheckin();
             tram2.doCheckin();
             
-            Console.WriteLine($"Het aantal OVPaaltjes in deze tram is {tram1.aantalOVPaaltjes}");
+            Console.WriteLine($"Het aantal OVPaaltjes in deze tram is {tram1.getAantalOVPaaltjes()}");
+            tram1.setAantalOVPaaltjes(12);
+            Console.WriteLine($"Het aantal OVPaaltjes in deze tram is {tram1.getAantalOVPaaltjes()}");
             Console.WriteLine($"Het naam van de conducteur van deze trein is {trein1.conducteur.name} {trein1.conducteur.lastName}");
             Console.WriteLine($"Het aantal checkins in deze tram is {Vervoersmiddel.aantalCheckins}");
         }
