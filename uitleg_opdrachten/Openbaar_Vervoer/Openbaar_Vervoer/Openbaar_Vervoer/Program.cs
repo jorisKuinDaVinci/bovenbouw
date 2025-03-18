@@ -14,6 +14,14 @@
             persoon1.bemanVoertuig(trein1);
             persoon2.bemanVoertuig(tram1);
 
+            persoon1.buyOVCard(OVTypes.BUSINESSOV);
+            persoon2.buyOVCard(OVTypes.STUDENTOV);
+
+            // ergens in de code 
+                if(persoon1.OVType == OVTypes.STUDENTOV)
+            //
+
+
             tram1.doCheckin();
             tram1.doCheckin();
             tram1.doCheckin();

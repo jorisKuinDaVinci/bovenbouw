@@ -5,6 +5,7 @@ public class Person
     public string name;
     public string lastName;
     public int age;
+    public OVTypes OVType;
 
     public Person(string name, string lastName, int age)
     {
@@ -18,4 +19,8 @@ public class Person
         vervoersmiddel.giveControl(this);
     }
     
+    public void buyOVCard(OVTypes cardType)
+    {
+        this.OVType = cardType;
+    }
 }
