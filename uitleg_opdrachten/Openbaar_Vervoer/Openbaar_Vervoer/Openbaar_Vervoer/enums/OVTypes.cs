@@ -8,10 +8,10 @@ namespace Openbaar_Vervoer;
 
 public enum OVTypes
 {
-    KIDSOV,
-    BUSINESSOV,
-    STUDENTOV,
-    DAYCARD,
-    YEARCARD,
-    MONTHCARD
+    KIDSOV = 0,
+    BUSINESSOV = 1,
+    STUDENTOV = 2,
+    DAYCARD = 3,
+    YEARCARD = 4,
+    MONTHCARD = 5
 }
