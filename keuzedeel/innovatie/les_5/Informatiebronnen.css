@@ -1,40 +1,61 @@
+/* Algemene styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
+
+/* Header */
 header {
-    background-color: black;
+    background-color: #0073e6;
     color: white;
     text-align: center;
-    padding: 1em 0;
+    padding: 20px 0;
 }
-section {
-    margin: 20px;
+
+/* Hoofdinhoud */
+main {
+    width: 80%;
+    margin: 20px auto;
     padding: 20px;
-    background-color: white;
+    background: white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-h2 {
-    color: black;
+
+/* Secties */
+section {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
 }
-.innovation {
-    margin-bottom: 20px;
+
+section:last-child {
+    border-bottom: none;
 }
-.innovation h3 {
-    color: #16a085;
-    /* kleur is 16a085 */
+
+/* Koppen */
+h1, h2 {
+    color: #0073e6;
 }
-.innovation h4 {
-    color: green;
+
+/* Links */
+a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
 }
-.answer {
-    font-size: 1.1em;
+
+a:hover {
+    text-decoration: underline;
 }
-.footer {
+
+/* Footer */
+footer {
     text-align: center;
-    margin-top: 40px;
-    color: gray;
+    padding: 15px;
+    background: #0073e6;
+    color: white;
+    margin-top: 20px;
 }
