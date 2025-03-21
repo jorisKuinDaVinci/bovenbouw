@@ -11,11 +11,11 @@ namespace Pokemon_Battle_Simulator5_joris
 
     public abstract class Pokemon
     {
-        public string Nickname { get; private set; }
-        public PokemonType Strength { get; private set; }
-        public PokemonType Weakness { get; private set; }
+        public string Nickname { get; }
+        public PokemonType Strength { get; }
+        public PokemonType Weakness { get; }
 
-        public Pokemon(string nickname, PokemonType strength, PokemonType weakness)
+        protected Pokemon(string nickname, PokemonType strength, PokemonType weakness)
         {
             Nickname = nickname;
             Strength = strength;

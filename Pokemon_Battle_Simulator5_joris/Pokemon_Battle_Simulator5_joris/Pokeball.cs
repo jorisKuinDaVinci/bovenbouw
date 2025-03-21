@@ -4,33 +4,33 @@ namespace Pokemon_Battle_Simulator5_joris
 {
     public class Pokeball
     {
-        public bool InBall { get; private set; } = true;
-        public Pokemon ContainedPokemon { get; private set; }
+        private bool _inBall = true;
+        public Pokemon ContainedPokemon { get; }
 
         public Pokeball(Pokemon pokemon)
         {
-            ContainedPokemon = pokemon;
+            ContainedPokemon = pokemon ?? throw new ArgumentNullException(nameof(pokemon));
         }
 
         public void Throw()
         {
-            if (!InBall)
+            if (!_inBall)
             {
                 Console.WriteLine("The Pokeball is already open!");
             }
             else
             {
                 Console.WriteLine($"You threw the Pokeball! {ContainedPokemon.Nickname} appears!");
-                InBall = false;
+                _inBall = false;
             }
         }
 
         public void Return()
         {
-            if (!InBall)
+            if (!_inBall)
             {
                 Console.WriteLine($"{ContainedPokemon.Nickname} returns to its Pokeball. The lid closes up.");
-                InBall = true;
+                _inBall = true;
             }
             else
             {
@@ -38,4 +38,5 @@ namespace Pokemon_Battle_Simulator5_joris
             }
         }
     }
+
 }
