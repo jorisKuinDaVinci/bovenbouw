@@ -7,7 +7,9 @@ namespace Pokemon_Battle_Simulator5_joris
     {
         private const int MaxPokeballs = 6;
         public string Name { get; }
-        private List<Pokeball> Belt { get; } = new List<Pokeball>(MaxPokeballs);
+
+        private List<Pokeball> _belt = new List<Pokeball>(MaxPokeballs);
+        public IReadOnlyList<Pokeball> Belt => _belt;
 
         public Trainer(string name)
         {
@@ -29,8 +31,8 @@ namespace Pokemon_Battle_Simulator5_joris
 
         private void AddPokemonToBelt(Pokemon pokemon)
         {
-            if (Belt.Count < MaxPokeballs)
-                Belt.Add(new Pokeball(pokemon));
+            if (_belt.Count < MaxPokeballs)
+                _belt.Add(new Pokeball(pokemon));  // Gebruik de private lijst in plaats van de readonly getter
             else
                 Console.WriteLine("Cannot add more Pokémon, belt is full!");
         }

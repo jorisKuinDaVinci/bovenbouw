@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator4_joris\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{63388782-EBB4-4FE2-B046-8C4D109B8B41}|Pokemon_Battle_Simulator4_joris\\Pokemon_Battle_Simulator4_joris.csproj|C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator4_joris\\pokemon_battle_simulator4_joris\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63388782-EBB4-4FE2-B046-8C4D109B8B41}|Pokemon_Battle_Simulator4_joris\\Pokemon_Battle_Simulator4_joris.csproj|c:\\school\\code\\bovenbouw\\pokemon_battle_simulator4_joris\\pokemon_battle_simulator4_joris\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63388782-EBB4-4FE2-B046-8C4D109B8B41}|Pokemon_Battle_Simulator4_joris\\Pokemon_Battle_Simulator4_joris.csproj|solutionrelative:pokemon_battle_simulator4_joris\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63388782-EBB4-4FE2-B046-8C4D109B8B41}|Pokemon_Battle_Simulator4_joris\\Pokemon_Battle_Simulator4_joris.csproj|c:\\school\\code\\bovenbouw\\pokemon_battle_simulator4_joris\\pokemon_battle_simulator4_joris\\arena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63388782-EBB4-4FE2-B046-8C4D109B8B41}|Pokemon_Battle_Simulator4_joris\\Pokemon_Battle_Simulator4_joris.csproj|C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator4_joris\\pokemon_battle_simulator4_joris\\arena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63388782-EBB4-4FE2-B046-8C4D109B8B41}|Pokemon_Battle_Simulator4_joris\\Pokemon_Battle_Simulator4_joris.csproj|solutionrelative:pokemon_battle_simulator4_joris\\arena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "Pokemon_Battle_Simulator4_joris\\Arena.cs",
               "ToolTip": "C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator4_joris\\Pokemon_Battle_Simulator4_joris\\Arena.cs",
               "RelativeToolTip": "Pokemon_Battle_Simulator4_joris\\Arena.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T12:33:26.941Z",
               "EditorCaption": ""
@@ -69,7 +69,7 @@
               "RelativeDocumentMoniker": "Pokemon_Battle_Simulator4_joris\\Battle.cs",
               "ToolTip": "C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator4_joris\\Pokemon_Battle_Simulator4_joris\\Battle.cs",
               "RelativeToolTip": "Pokemon_Battle_Simulator4_joris\\Battle.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T12:33:05.15Z",
               "EditorCaption": ""
@@ -84,8 +84,7 @@
               "RelativeToolTip": "Pokemon_Battle_Simulator4_joris\\Trainer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T12:26:56.458Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T12:26:56.458Z"
             },
             {
               "$type": "Document",
@@ -97,8 +96,7 @@
               "RelativeToolTip": "Pokemon_Battle_Simulator4_joris\\Pokeball.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T12:26:32.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T12:26:32.197Z"
             },
             {
               "$type": "Document",
@@ -110,8 +108,7 @@
               "RelativeToolTip": "Pokemon_Battle_Simulator4_joris\\Pokemon.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T12:25:54.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T12:25:54.874Z"
             },
             {
               "$type": "Document",
@@ -123,8 +120,7 @@
               "RelativeToolTip": "Pokemon_Battle_Simulator4_joris\\Squirtle.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T12:25:27.16Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T12:25:27.16Z"
             },
             {
               "$type": "Document",
@@ -136,8 +132,7 @@
               "RelativeToolTip": "Pokemon_Battle_Simulator4_joris\\Charmander.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T12:24:59.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T12:24:59.455Z"
             },
             {
               "$type": "Document",
@@ -149,8 +144,7 @@
               "RelativeToolTip": "Pokemon_Battle_Simulator4_joris\\Bulbasaur.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T12:24:26.701Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T12:24:26.701Z"
             },
             {
               "$type": "Document",
@@ -160,7 +154,7 @@
               "RelativeDocumentMoniker": "Pokemon_Battle_Simulator4_joris\\Program.cs",
               "ToolTip": "C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator4_joris\\Pokemon_Battle_Simulator4_joris\\Program.cs",
               "RelativeToolTip": "Pokemon_Battle_Simulator4_joris\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAgAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T12:23:34.603Z",
               "EditorCaption": ""

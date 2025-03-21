@@ -1,0 +1,2 @@
+C:\school\code\bovenbouw\Pokemon_Battle_Simulator5_joris\Pokemon_Battle_Simulator5_joris\obj\Debug\Pokemon_Battle_Simulator5_joris.csproj.AssemblyReference.cache
+C:\school\code\bovenbouw\Pokemon_Battle_Simulator5_joris\Pokemon_Battle_Simulator5_joris\obj\Debug\Pokemon_Battle_Simulator5_joris.csproj.CoreCompileInputs.cache

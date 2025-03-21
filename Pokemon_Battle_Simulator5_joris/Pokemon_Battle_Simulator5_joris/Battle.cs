@@ -1,115 +1,62 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Pokemon_Battle_Simulator5_joris
 {
     public class Battle
     {
-        public Trainer trainer1;
-        public Trainer trainer2;
-        public static int roundsFought = 0;
-        public static int battlesFought = 0;
+        private Trainer _trainer1;
+        private Trainer _trainer2;
+        private static int _roundsFought = 0;
+        private static int _battlesFought = 0;
 
         public Battle(Trainer trainer1, Trainer trainer2)
         {
-            this.trainer1 = trainer1;
-            this.trainer2 = trainer2;
+            _trainer1 = trainer1;
+            _trainer2 = trainer2;
         }
 
         public void Start()
         {
-            battlesFought++;
+            _battlesFought++;
             Pokemon pokemon1 = null;
             Pokemon pokemon2 = null;
+            Random random = new Random();
 
             while (true)
             {
-                if (trainer1.belt.Count == 0)
-                {
-                    break;  // Trainer 1 heeft geen Pokémon meer, stop de battle
-                }
-
-                if (trainer2.belt.Count == 0)
-                {
-                    break;  // Trainer 2 heeft geen Pokémon meer, stop de battle
-                }
-
-                roundsFought++;
-                Console.WriteLine("Round " + roundsFought + ":");
+                _roundsFought++;
+                Console.WriteLine($"Round {_roundsFought}:");
 
                 // Trainer 1 throws a random Pokeball
-                int index1 = new Random().Next(0, trainer1.belt.Count);
-                trainer1.ThrowPokeball(index1);
-                pokemon1 = trainer1.belt[index1].containedPokemon;
+                int index1 = random.Next(0, 6);
+                _trainer1.ThrowPokeball(index1);
+                pokemon1 = _trainer1.Belt[index1].ContainedPokemon;
 
                 // Trainer 2 throws a random Pokeball
-                int index2 = new Random().Next(0, trainer2.belt.Count);
-                trainer2.ThrowPokeball(index2);
-                pokemon2 = trainer2.belt[index2].containedPokemon;
+                int index2 = random.Next(0, 6);
+                _trainer2.ThrowPokeball(index2);
+                pokemon2 = _trainer2.Belt[index2].ContainedPokemon;
 
-                if (pokemon1.strength == "fire")
+                // Determine winner
+                if (pokemon1.Strength == pokemon2.Weakness)
                 {
-                    if (pokemon2.strength == "grass")
-                    {
-                        Console.WriteLine("Pokemon1 wins the round!");
-                        trainer2.ReturnPokemon(index2);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Pokemon2 wins the round!");
-                        trainer1.ReturnPokemon(index1);
-                    }
+                    Console.WriteLine("Pokemon1 wins the round!");
+                    _trainer2.ReturnPokemon(index2);
                 }
-                else if (pokemon1.strength == "grass")
+                else if (pokemon2.Strength == pokemon1.Weakness)
                 {
-                    if (pokemon2.strength == "water")
-                    {
-                        Console.WriteLine("Pokemon1 wins the round!");
-                        trainer2.ReturnPokemon(index2);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Pokemon2 wins the round!");
-                        trainer1.ReturnPokemon(index1);
-                    }
+                    Console.WriteLine("Pokemon2 wins the round!");
+                    _trainer1.ReturnPokemon(index1);
                 }
-                else if (pokemon1.strength == "water")
-                {
-                    if (pokemon2.strength == "fire")
-                    {
-                        Console.WriteLine("Pokemon1 wins the round!");
-                        trainer2.ReturnPokemon(index2);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Pokemon2 wins the round!");
-                        trainer1.ReturnPokemon(index1);
-                    }
-                }
-
-                // Return both pokemon if there is a draw or if both are returned after battle
-                if (pokemon1.strength == pokemon2.strength)
+                else
                 {
                     Console.WriteLine("It's a draw!");
-                    trainer1.ReturnPokemon(index1);
-                    trainer2.ReturnPokemon(index2);
+                    _trainer1.ReturnPokemon(index1);
+                    _trainer2.ReturnPokemon(index2);
                 }
 
                 Console.WriteLine("\nPress Enter to continue to the next round...");
                 Console.ReadLine();
-            }
-
-            if (trainer1.belt.Count == 0)
-            {
-                Console.WriteLine(trainer2.name + " wins the battle!");
-            }
-            else if (trainer2.belt.Count == 0)
-            {
-                Console.WriteLine(trainer1.name + " wins the battle!");
-            }
-            else
-            {
-                Console.WriteLine("The battle ended in a draw!");
             }
         }
     }
