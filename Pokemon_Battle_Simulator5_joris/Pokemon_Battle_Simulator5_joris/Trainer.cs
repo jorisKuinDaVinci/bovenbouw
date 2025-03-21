@@ -5,13 +5,15 @@ namespace Pokemon_Battle_Simulator5_joris
 {
     public class Trainer
     {
-        public string name;
-        public List<Pokeball> belt = new List<Pokeball>(6);
+        public string Name { get; private set; }
+        private List<Pokeball> belt = new List<Pokeball>();
+
+        private const int MAX_POKEBALLS = 6;
 
         public Trainer(string name)
         {
-            this.name = name;
-            Console.WriteLine(name + ", geef je Pokémon een nickname!");
+            Name = name;
+            Console.WriteLine($"{Name}, geef je Pokémon een nickname!");
 
             // Adding two of each Pokémon type to the belt
             belt.Add(new Pokeball(new Charmander(GetPokemonNickname("Charmander"))));
@@ -24,7 +26,7 @@ namespace Pokemon_Battle_Simulator5_joris
 
         public string GetPokemonNickname(string species)
         {
-            Console.Write("Voer een nickname in voor " + species + ": ");
+            Console.Write($"Voer een nickname in voor {species}: ");
             return Console.ReadLine();
         }
 
@@ -36,7 +38,7 @@ namespace Pokemon_Battle_Simulator5_joris
                 return;
             }
 
-            Console.WriteLine(name + " throws a Pokeball!");
+            Console.WriteLine($"{Name} throws a Pokeball!");
             belt[index].Throw();
         }
 
@@ -48,8 +50,10 @@ namespace Pokemon_Battle_Simulator5_joris
                 return;
             }
 
-            Console.WriteLine(name + " returns the Pokémon.");
+            Console.WriteLine($"{Name} returns the Pokémon.");
             belt[index].Return();
         }
+
+        public int BeltCount => belt.Count;  // Expose belt count via a property
     }
 }

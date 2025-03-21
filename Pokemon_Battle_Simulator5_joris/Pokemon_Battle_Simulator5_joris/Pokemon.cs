@@ -11,25 +11,25 @@ namespace Pokemon_Battle_Simulator5_joris
 
     public abstract class Pokemon
     {
-        public string nickname;
-        public string strength;
-        public string weakness;
+        public string Nickname { get; private set; }
+        public PokemonType Strength { get; private set; }
+        public PokemonType Weakness { get; private set; }
 
-        public Pokemon(string nickname, string strength, string weakness)
+        public Pokemon(string nickname, PokemonType strength, PokemonType weakness)
         {
-            this.nickname = nickname;
-            this.strength = strength;
-            this.weakness = weakness;
+            Nickname = nickname;
+            Strength = strength;
+            Weakness = weakness;
         }
 
         public void ShowInfo()
         {
-            Console.WriteLine(nickname + ": Strength = " + strength + ", Weakness = " + weakness);
+            Console.WriteLine($"{Nickname}: Strength = {Strength}, Weakness = {Weakness}");
         }
 
         public string BattleCry()
         {
-            return nickname + "! " + nickname + "!";
+            return $"{Nickname}! {Nickname}!";
         }
     }
 }
