@@ -1,0 +1,86 @@
+/* Algemene opmaak */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Container centreren */
+.container {
+    width: 60%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigatie */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Titels */
+h1 {
+    font-size: 36px;
+    line-height: 36px;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 32px;
+    margin-top: 40px;
+}
+
+/* Introductie paragraaf */
+.intro {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+/* Ingrediënten */
+.ingredients {
+    list-style: none;
+}
+
+.ingredients li {
+    margin-bottom: 10px;
+}
+
+/* Bereidingswijze */
+.steps {
+    padding-left: 20px;
+}
+
+.steps li {
+    margin-bottom: 20px;
+}
+
+/* Tip */
+.tip {
+    background-color: #def6ed;
+    padding: 25px;
+    border-radius: 4px;
+    margin-top: 40px;
+}
+
+/* Afbeelding */
+img {
+    width: 70%;
+    margin-top: 40px;
+}

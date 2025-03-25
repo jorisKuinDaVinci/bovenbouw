@@ -1,0 +1,19 @@
+h1{
+    display: inline;
+    color: green;
+}
+
+.text-inline{
+    display: block;
+    color: red;
+}
+
+img{
+    display: block;
+}
+
+h2{
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
