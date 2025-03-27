@@ -7,7 +7,7 @@ namespace Pokemon_Battle_Simulator5_joris
     {
         private const int MaxPokeballs = 6;
 
-        private string name; // private field for the trainer's name
+        private string name;
 
         private List<Pokeball> belt = new List<Pokeball>(MaxPokeballs);
 
@@ -80,7 +80,7 @@ namespace Pokemon_Battle_Simulator5_joris
         {
             if (index >= 0 && index < belt.Count)
             {
-                return belt[index].ContainedPokemon; // Return the Pokémon contained in the Pokéball at the given index
+                return belt[index].ContainedPokemon(); // Return the Pokémon contained in the Pokéball at the given index
             }
             else
             {

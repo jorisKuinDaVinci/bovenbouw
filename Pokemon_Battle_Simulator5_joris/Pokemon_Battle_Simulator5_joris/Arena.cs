@@ -4,8 +4,8 @@ namespace Pokemon_Battle_Simulator5_joris
 {
     public class Arena
     {
-        public static int totalRounds = 0;
-        public static int totalBattles = 0;
+        private static int totalRounds = 0;
+        private static int totalBattles = 0;
 
         public void StartBattle(Trainer trainer1, Trainer trainer2)
         {
