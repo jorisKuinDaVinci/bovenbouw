@@ -4,9 +4,6 @@ namespace Pokemon_Battle_Simulator5_joris
 {
     public class Arena
     {
-        private static int totalRounds = 0;
-        private static int totalBattles = 0;
-
         public void StartBattle(Trainer trainer1, Trainer trainer2)
         {
             Console.WriteLine("The battle begins!\n");
