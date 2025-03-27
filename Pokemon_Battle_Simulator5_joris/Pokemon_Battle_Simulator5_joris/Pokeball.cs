@@ -9,10 +9,6 @@ namespace Pokemon_Battle_Simulator5_joris
 
         public Pokeball(Pokemon pokemon)
         {
-            if (pokemon == null)
-            {
-                throw new ArgumentNullException(nameof(pokemon));
-            }
             containedPokemon = pokemon;
         }
 
@@ -47,5 +43,4 @@ namespace Pokemon_Battle_Simulator5_joris
             }
         }
     }
-
 }
