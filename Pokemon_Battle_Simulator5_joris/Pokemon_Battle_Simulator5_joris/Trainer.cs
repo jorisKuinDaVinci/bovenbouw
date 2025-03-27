@@ -6,21 +6,31 @@ namespace Pokemon_Battle_Simulator5_joris
     public class Trainer
     {
         private const int MaxPokeballs = 6;
-        public string Name { get; }
-
-        private List<Pokeball> _belt = new List<Pokeball>(MaxPokeballs);
-        public IReadOnlyList<Pokeball> Belt => _belt;
+        private string name;
+        private List<Pokeball> belt = new List<Pokeball>(MaxPokeballs);
 
         public Trainer(string name)
         {
-            Name = name;
-            Console.WriteLine($"{Name}, geef je Pokémon een nickname!");
+            this.name = name;
+            Console.WriteLine($"{this.name}, geef je Pokémon een nickname!");
             AddPokemonToBelt(new Charmander(GetPokemonNickname("Charmander")));
             AddPokemonToBelt(new Charmander(GetPokemonNickname("Charmander")));
             AddPokemonToBelt(new Squirtle(GetPokemonNickname("Squirtle")));
             AddPokemonToBelt(new Squirtle(GetPokemonNickname("Squirtle")));
             AddPokemonToBelt(new Bulbasaur(GetPokemonNickname("Bulbasaur")));
             AddPokemonToBelt(new Bulbasaur(GetPokemonNickname("Bulbasaur")));
+        }
+
+        // Getter method for Name
+        public string Name()
+        {
+            return name;
+        }
+
+        // Return a copy of the belt list to prevent modification from outside the class
+        public List<Pokeball> Belt()
+        {
+            return new List<Pokeball>(belt);
         }
 
         private string GetPokemonNickname(string species)
@@ -31,18 +41,18 @@ namespace Pokemon_Battle_Simulator5_joris
 
         private void AddPokemonToBelt(Pokemon pokemon)
         {
-            if (_belt.Count < MaxPokeballs)
-                _belt.Add(new Pokeball(pokemon));  // Gebruik de private lijst in plaats van de readonly getter
+            if (belt.Count < MaxPokeballs)
+                belt.Add(new Pokeball(pokemon));
             else
                 Console.WriteLine("Cannot add more Pokémon, belt is full!");
         }
 
         public void ThrowPokeball(int index)
         {
-            if (index >= 0 && index < Belt.Count)
+            if (index >= 0 && index < Belt().Count)
             {
-                Console.WriteLine($"{Name} throws a Pokeball!");
-                Belt[index].Throw();
+                Console.WriteLine($"{Name()} throws a Pokeball!");
+                Belt()[index].Throw();
             }
             else
             {
@@ -52,10 +62,10 @@ namespace Pokemon_Battle_Simulator5_joris
 
         public void ReturnPokemon(int index)
         {
-            if (index >= 0 && index < Belt.Count)
+            if (index >= 0 && index < Belt().Count)
             {
-                Console.WriteLine($"{Name} returns the Pokémon.");
-                Belt[index].Return();
+                Console.WriteLine($"{Name()} returns the Pokémon.");
+                Belt()[index].Return();
             }
             else
             {

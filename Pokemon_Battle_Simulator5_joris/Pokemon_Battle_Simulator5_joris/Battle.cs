@@ -18,8 +18,6 @@ namespace Pokemon_Battle_Simulator5_joris
         public void Start()
         {
             _battlesFought++;
-            Pokemon pokemon1 = null;
-            Pokemon pokemon2 = null;
             Random random = new Random();
 
             while (true)
@@ -27,35 +25,42 @@ namespace Pokemon_Battle_Simulator5_joris
                 _roundsFought++;
                 Console.WriteLine($"Round {_roundsFought}:");
 
-                // Trainer 1 throws a random Pokeball
-                int index1 = random.Next(0, 6);
+                // Check of beide trainers Pokémon hebben
+                if (_trainer1.GetBeltSize() == 0 || _trainer2.GetBeltSize() == 0)
+                {
+                    Console.WriteLine("Een van de trainers heeft geen Pokémon meer. De strijd is voorbij!");
+                    break;
+                }
+
+                // Trainer 1 kiest een willekeurige Pokémon
+                int index1 = random.Next(0, _trainer1.GetBeltSize());
                 _trainer1.ThrowPokeball(index1);
-                pokemon1 = _trainer1.Belt[index1].ContainedPokemon;
+                Pokemon pokemon1 = _trainer1.GetPokemonFromBelt(index1);
 
-                // Trainer 2 throws a random Pokeball
-                int index2 = random.Next(0, 6);
+                // Trainer 2 kiest een willekeurige Pokémon
+                int index2 = random.Next(0, _trainer2.GetBeltSize());
                 _trainer2.ThrowPokeball(index2);
-                pokemon2 = _trainer2.Belt[index2].ContainedPokemon;
+                Pokemon pokemon2 = _trainer2.GetPokemonFromBelt(index2);
 
-                // Determine winner
+                // Bepaal de winnaar
                 if (pokemon1.Strength == pokemon2.Weakness)
                 {
-                    Console.WriteLine("Pokemon1 wins the round!");
+                    Console.WriteLine($"{pokemon1.Nickname} wint de ronde!");
                     _trainer2.ReturnPokemon(index2);
                 }
                 else if (pokemon2.Strength == pokemon1.Weakness)
                 {
-                    Console.WriteLine("Pokemon2 wins the round!");
+                    Console.WriteLine($"{pokemon2.Nickname} wint de ronde!");
                     _trainer1.ReturnPokemon(index1);
                 }
                 else
                 {
-                    Console.WriteLine("It's a draw!");
+                    Console.WriteLine("Het is een gelijkspel!");
                     _trainer1.ReturnPokemon(index1);
                     _trainer2.ReturnPokemon(index2);
                 }
 
-                Console.WriteLine("\nPress Enter to continue to the next round...");
+                Console.WriteLine("\nDruk op Enter om door te gaan naar de volgende ronde...");
                 Console.ReadLine();
             }
         }
