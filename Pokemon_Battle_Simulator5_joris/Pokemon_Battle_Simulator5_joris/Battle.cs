@@ -60,8 +60,21 @@ namespace Pokemon_Battle_Simulator5_joris
                     trainer2.ReturnPokemon(index2);
                 }
 
-                Console.WriteLine("\nPress Enter to continue to the next round...");
-                Console.ReadLine();
+                Console.WriteLine("\nType 'continue' to proceed to the next round, or type 'exit' to end the battle.");
+                string input = Console.ReadLine()?.ToLower();
+                if (input == "continue")
+                {
+                    continue;
+                }
+                else if (input == "exit")
+                {
+                    Console.WriteLine("The battle has ended!");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. The battle will continue.");
+                }
             }
         }
     }

@@ -5,7 +5,7 @@ namespace Pokemon_Battle_Simulator5_joris
     public class Pokeball
     {
         private bool inBall = true;
-        private Pokemon containedPokemon;
+        private readonly Pokemon containedPokemon;
 
         // Constructor that adds the Pokémon to the Pokeball.
         public Pokeball(Pokemon pokemon)
