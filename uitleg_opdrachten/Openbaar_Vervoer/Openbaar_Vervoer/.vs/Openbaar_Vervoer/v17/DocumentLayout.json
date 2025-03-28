@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\school\\code\\bovenbouw\\uitleg_opdrachten\\Openbaar_Vervoer\\Openbaar_Vervoer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8914474-1950-4023-A9B5-CE45E0C88624}|Openbaar_Vervoer\\Openbaar_Vervoer.csproj|c:\\school\\code\\bovenbouw\\uitleg_opdrachten\\openbaar_vervoer\\openbaar_vervoer\\openbaar_vervoer\\classes\\tram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8914474-1950-4023-A9B5-CE45E0C88624}|Openbaar_Vervoer\\Openbaar_Vervoer.csproj|solutionrelative:openbaar_vervoer\\classes\\tram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8914474-1950-4023-A9B5-CE45E0C88624}|Openbaar_Vervoer\\Openbaar_Vervoer.csproj|c:\\school\\code\\bovenbouw\\uitleg_opdrachten\\openbaar_vervoer\\openbaar_vervoer\\openbaar_vervoer\\classes\\vervoersmiddel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8914474-1950-4023-A9B5-CE45E0C88624}|Openbaar_Vervoer\\Openbaar_Vervoer.csproj|solutionrelative:openbaar_vervoer\\classes\\vervoersmiddel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D8914474-1950-4023-A9B5-CE45E0C88624}|Openbaar_Vervoer\\Openbaar_Vervoer.csproj|c:\\school\\code\\bovenbouw\\uitleg_opdrachten\\openbaar_vervoer\\openbaar_vervoer\\openbaar_vervoer\\classes\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8914474-1950-4023-A9B5-CE45E0C88624}|Openbaar_Vervoer\\Openbaar_Vervoer.csproj|solutionrelative:openbaar_vervoer\\classes\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8914474-1950-4023-A9B5-CE45E0C88624}|Openbaar_Vervoer\\Openbaar_Vervoer.csproj|c:\\school\\code\\bovenbouw\\uitleg_opdrachten\\openbaar_vervoer\\openbaar_vervoer\\openbaar_vervoer\\enums\\ovtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8914474-1950-4023-A9B5-CE45E0C88624}|Openbaar_Vervoer\\Openbaar_Vervoer.csproj|solutionrelative:openbaar_vervoer\\enums\\ovtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8914474-1950-4023-A9B5-CE45E0C88624}|Openbaar_Vervoer\\Openbaar_Vervoer.csproj|c:\\school\\code\\bovenbouw\\uitleg_opdrachten\\openbaar_vervoer\\openbaar_vervoer\\openbaar_vervoer\\classes\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8914474-1950-4023-A9B5-CE45E0C88624}|Openbaar_Vervoer\\Openbaar_Vervoer.csproj|solutionrelative:openbaar_vervoer\\classes\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D8914474-1950-4023-A9B5-CE45E0C88624}|Openbaar_Vervoer\\Openbaar_Vervoer.csproj|c:\\school\\code\\bovenbouw\\uitleg_opdrachten\\openbaar_vervoer\\openbaar_vervoer\\openbaar_vervoer\\classes\\vervoersmiddel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8914474-1950-4023-A9B5-CE45E0C88624}|Openbaar_Vervoer\\Openbaar_Vervoer.csproj|solutionrelative:openbaar_vervoer\\classes\\vervoersmiddel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8914474-1950-4023-A9B5-CE45E0C88624}|Openbaar_Vervoer\\Openbaar_Vervoer.csproj|c:\\school\\code\\bovenbouw\\uitleg_opdrachten\\openbaar_vervoer\\openbaar_vervoer\\openbaar_vervoer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8914474-1950-4023-A9B5-CE45E0C88624}|Openbaar_Vervoer\\Openbaar_Vervoer.csproj|solutionrelative:openbaar_vervoer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8914474-1950-4023-A9B5-CE45E0C88624}|Openbaar_Vervoer\\Openbaar_Vervoer.csproj|c:\\school\\code\\bovenbouw\\uitleg_opdrachten\\openbaar_vervoer\\openbaar_vervoer\\openbaar_vervoer\\classes\\tram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8914474-1950-4023-A9B5-CE45E0C88624}|Openbaar_Vervoer\\Openbaar_Vervoer.csproj|solutionrelative:openbaar_vervoer\\classes\\tram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Person.cs",
               "DocumentMoniker": "C:\\school\\code\\bovenbouw\\uitleg_opdrachten\\Openbaar_Vervoer\\Openbaar_Vervoer\\Openbaar_Vervoer\\classes\\Person.cs",
               "RelativeDocumentMoniker": "Openbaar_Vervoer\\classes\\Person.cs",
@@ -42,11 +42,12 @@
               "RelativeToolTip": "Openbaar_Vervoer\\classes\\Person.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T08:24:33.92Z"
+              "WhenOpened": "2025-03-18T08:24:33.92Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "OVTypes.cs",
               "DocumentMoniker": "C:\\school\\code\\bovenbouw\\uitleg_opdrachten\\Openbaar_Vervoer\\Openbaar_Vervoer\\Openbaar_Vervoer\\enums\\OVTypes.cs",
               "RelativeDocumentMoniker": "Openbaar_Vervoer\\enums\\OVTypes.cs",
@@ -54,23 +55,25 @@
               "RelativeToolTip": "Openbaar_Vervoer\\enums\\OVTypes.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T08:22:41.619Z"
+              "WhenOpened": "2025-03-18T08:22:41.619Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Vervoersmiddel.cs",
               "DocumentMoniker": "C:\\school\\code\\bovenbouw\\uitleg_opdrachten\\Openbaar_Vervoer\\Openbaar_Vervoer\\Openbaar_Vervoer\\classes\\Vervoersmiddel.cs",
               "RelativeDocumentMoniker": "Openbaar_Vervoer\\classes\\Vervoersmiddel.cs",
               "ToolTip": "C:\\school\\code\\bovenbouw\\uitleg_opdrachten\\Openbaar_Vervoer\\Openbaar_Vervoer\\Openbaar_Vervoer\\classes\\Vervoersmiddel.cs",
               "RelativeToolTip": "Openbaar_Vervoer\\classes\\Vervoersmiddel.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA1wAQAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwAQAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T10:31:50.299Z"
+              "WhenOpened": "2025-03-10T10:31:50.299Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Tram.cs",
               "DocumentMoniker": "C:\\school\\code\\bovenbouw\\uitleg_opdrachten\\Openbaar_Vervoer\\Openbaar_Vervoer\\Openbaar_Vervoer\\classes\\Tram.cs",
               "RelativeDocumentMoniker": "Openbaar_Vervoer\\classes\\Tram.cs",
@@ -83,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\school\\code\\bovenbouw\\uitleg_opdrachten\\Openbaar_Vervoer\\Openbaar_Vervoer\\Openbaar_Vervoer\\Program.cs",
               "RelativeDocumentMoniker": "Openbaar_Vervoer\\Program.cs",
@@ -91,7 +94,8 @@
               "RelativeToolTip": "Openbaar_Vervoer\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T09:49:40.883Z"
+              "WhenOpened": "2025-03-10T09:49:40.883Z",
+              "EditorCaption": ""
             }
           ]
         }

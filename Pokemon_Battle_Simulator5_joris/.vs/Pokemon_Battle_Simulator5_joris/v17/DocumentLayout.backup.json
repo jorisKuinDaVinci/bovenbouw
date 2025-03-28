@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator5_joris\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D3BB00CE-B129-46F3-8178-E508FC1BEAC8}|Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris.csproj|C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator5_joris\\pokemon_battle_simulator5_joris\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D3BB00CE-B129-46F3-8178-E508FC1BEAC8}|Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris.csproj|C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator5_joris\\pokemon_battle_simulator5_joris\\trainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3BB00CE-B129-46F3-8178-E508FC1BEAC8}|Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris.csproj|solutionrelative:pokemon_battle_simulator5_joris\\trainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3BB00CE-B129-46F3-8178-E508FC1BEAC8}|Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris.csproj|C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator5_joris\\pokemon_battle_simulator5_joris\\arena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3BB00CE-B129-46F3-8178-E508FC1BEAC8}|Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris.csproj|solutionrelative:pokemon_battle_simulator5_joris\\arena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3BB00CE-B129-46F3-8178-E508FC1BEAC8}|Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris.csproj|c:\\school\\code\\bovenbouw\\pokemon_battle_simulator5_joris\\pokemon_battle_simulator5_joris\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3BB00CE-B129-46F3-8178-E508FC1BEAC8}|Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris.csproj|solutionrelative:pokemon_battle_simulator5_joris\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -13,14 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D3BB00CE-B129-46F3-8178-E508FC1BEAC8}|Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris.csproj|C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator5_joris\\pokemon_battle_simulator5_joris\\pokeball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3BB00CE-B129-46F3-8178-E508FC1BEAC8}|Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris.csproj|solutionrelative:pokemon_battle_simulator5_joris\\pokeball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3BB00CE-B129-46F3-8178-E508FC1BEAC8}|Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris.csproj|C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator5_joris\\pokemon_battle_simulator5_joris\\arena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3BB00CE-B129-46F3-8178-E508FC1BEAC8}|Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris.csproj|solutionrelative:pokemon_battle_simulator5_joris\\arena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3BB00CE-B129-46F3-8178-E508FC1BEAC8}|Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris.csproj|c:\\school\\code\\bovenbouw\\pokemon_battle_simulator5_joris\\pokemon_battle_simulator5_joris\\trainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3BB00CE-B129-46F3-8178-E508FC1BEAC8}|Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris.csproj|solutionrelative:pokemon_battle_simulator5_joris\\trainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3BB00CE-B129-46F3-8178-E508FC1BEAC8}|Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris.csproj|C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator5_joris\\pokemon_battle_simulator5_joris\\bulbasaur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,11 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Battle.cs",
               "DocumentMoniker": "C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris\\Battle.cs",
               "RelativeDocumentMoniker": "Pokemon_Battle_Simulator5_joris\\Battle.cs",
@@ -58,12 +58,11 @@
               "RelativeToolTip": "Pokemon_Battle_Simulator5_joris\\Battle.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAUwEwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T08:27:30.567Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T08:27:30.567Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Arena.cs",
               "DocumentMoniker": "C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris\\Arena.cs",
               "RelativeDocumentMoniker": "Pokemon_Battle_Simulator5_joris\\Arena.cs",
@@ -76,20 +75,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Trainer.cs",
               "DocumentMoniker": "C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris\\Trainer.cs",
               "RelativeDocumentMoniker": "Pokemon_Battle_Simulator5_joris\\Trainer.cs",
               "ToolTip": "C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris\\Trainer.cs",
               "RelativeToolTip": "Pokemon_Battle_Simulator5_joris\\Trainer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-20T08:26:33.428Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Pokeball.cs",
               "DocumentMoniker": "C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris\\Pokeball.cs",
               "RelativeDocumentMoniker": "Pokemon_Battle_Simulator5_joris\\Pokeball.cs",
@@ -97,8 +96,7 @@
               "RelativeToolTip": "Pokemon_Battle_Simulator5_joris\\Pokeball.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T08:26:05.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T08:26:05.81Z"
             },
             {
               "$type": "Document",
@@ -110,8 +108,7 @@
               "RelativeToolTip": "Pokemon_Battle_Simulator5_joris\\Squirtle.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T08:25:35.228Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T08:25:35.228Z"
             },
             {
               "$type": "Document",
@@ -123,8 +120,7 @@
               "RelativeToolTip": "Pokemon_Battle_Simulator5_joris\\Bulbasaur.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T08:25:04.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T08:25:04.826Z"
             },
             {
               "$type": "Document",
@@ -136,8 +132,7 @@
               "RelativeToolTip": "Pokemon_Battle_Simulator5_joris\\Charmander.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T08:24:35.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T08:24:35.682Z"
             },
             {
               "$type": "Document",
@@ -149,18 +144,17 @@
               "RelativeToolTip": "Pokemon_Battle_Simulator5_joris\\Pokemon.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwDMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T08:23:58.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T08:23:58.075Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris\\Program.cs",
               "RelativeDocumentMoniker": "Pokemon_Battle_Simulator5_joris\\Program.cs",
               "ToolTip": "C:\\school\\code\\bovenbouw\\Pokemon_Battle_Simulator5_joris\\Pokemon_Battle_Simulator5_joris\\Program.cs",
               "RelativeToolTip": "Pokemon_Battle_Simulator5_joris\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-20T08:21:07.323Z",
               "EditorCaption": ""
