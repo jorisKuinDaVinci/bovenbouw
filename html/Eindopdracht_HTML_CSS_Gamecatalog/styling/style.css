@@ -88,3 +88,11 @@ section p em {
     font-family: serif;
     font-style: italic;
 }
+
+.game-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
