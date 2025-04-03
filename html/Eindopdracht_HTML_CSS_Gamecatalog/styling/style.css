@@ -2,52 +2,49 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Lichte achtergrondkleur */
+    background-color: #f4f4f4;
     text-align: center;
 }
 
 nav {
-    background-color: #333; /* Donkergrijze achtergrond */
+    background-color: #333;
     padding: 10px 0;
     display: flex;
     align-items: center;
     position: relative;
 }
 
-.nav-center {
+.linkjes {
     list-style: none;
     padding: 0;
     margin: 0 auto;
     display: flex;
 }
 
-.nav-center li {
+.linkjes li {
     margin: 0 15px;
 }
 
-.nav-center li a {
+.linkjes li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
 }
 
-.nav-right {
-    position: absolute;
-    right: 20px;
-    top: 0;
-    bottom: 0;
+.game-picker {
+    margin-right: 20px;
     display: flex;
     align-items: center;
 }
 
-.nav-right a {
+.game-picker a {
     color: white;
     text-decoration: none;
     font-size: 18px;
 }
 
 header {
-    background-color: #444; /* Donkergrijze achtergrond */
+    background-color: #444;
     color: white;
     padding: 20px 0;
     font-size: 23px;
@@ -56,11 +53,10 @@ header {
 main {
     width: 1000px;
     margin: 20px auto;
-    background-color: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Schaduw effect */
     text-align: left;
+    border-left: 2px solid #ccc;
+    border-right: 2px solid #ccc;
 }
 
 h1, h2, h3 {
@@ -69,6 +65,8 @@ h1, h2, h3 {
 
 section {
     margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ccc;
 }
 
 ul {
@@ -76,7 +74,7 @@ ul {
 }
 
 footer {
-    background-color: #333; /* Donkergrijze achtergrond */
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -89,10 +87,11 @@ section p em {
     font-style: italic;
 }
 
+/* Stijl voor afbeeldingen */
 .game-image {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #ccc;
     border-radius: 10px;
-    margin-bottom: 20px;
 }
