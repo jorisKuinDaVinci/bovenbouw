@@ -7,11 +7,15 @@ body {
 }
 
 nav {
-    background-color: #333;
+    background-color: white;
     padding: 10px 0;
     display: flex;
     align-items: center;
     position: relative;
+    border: 2px solid black;
+    border-radius: 0px 0px 0px 0px;
+    margin: 0 auto;
+    width: 1000px; /* Pas de breedte aan indien nodig */
 }
 
 .linkjes {
@@ -21,31 +25,33 @@ nav {
     display: flex;
 }
 
-.linkjes li {
-    margin: 0 15px;
-}
-
 .linkjes li a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 18px;
 }
 
 .game-picker {
-    margin-right: 20px;
+    /* rechts van de linkjes */
+    margin-left: auto;
     display: flex;
     align-items: center;
+    border: 2px solid black;
+    border-radius: 0px 0px 0px 0px;
+    padding: 10px;
+    /* niet tegen de rand van de border */
+    margin-right: 10px;
 }
 
 .game-picker a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 18px;
 }
 
 header {
-    background-color: #444;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 20px 0;
     font-size: 23px;
 }
@@ -53,10 +59,16 @@ header {
 main {
     width: 1000px;
     margin: 20px auto;
+    /*margin: 20px auto;*/
     padding: 20px;
     text-align: left;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+}
+
+.intro {
+    border: 2px solid black;
+    /*border is rechthoekig. dit gebeurdt in de regel hieronder*/
+    border-radius: 0px 0px 0px 0px;
+    padding: 20px;
 }
 
 h1, h2, h3 {
@@ -66,16 +78,18 @@ h1, h2, h3 {
 section {
     margin-bottom: 20px;
     padding-bottom: 20px;
-    border-bottom: 2px solid black;
 }
 
-ul {
-    padding-left: 20px;
+.link {
+    border: 2px solid black;
+    border-radius: 0px 0px 0px 0px;
+    padding: 10px;
+    margin: 0 15px;
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: white;
+    color: black;
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
@@ -93,5 +107,40 @@ section p em {
     height: 200px;
     object-fit: cover;
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 0px 0px 0px 0px;
+}
+
+.game-info {
+    border: 2px solid black;
+    border-radius: 0px 0px 0px 0px;
+    padding: 10px;
+    width: 600px; /* Pas de breedte aan indien nodig */
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* game-details moet rechtsnaast op dezelfde hoogte als game-info staan. */
+.game-details {
+    border: 2px solid black;
+    border-radius: 0px 0px 0px 0px;
+    padding: 10px;
+    /* naar rechts van game-info */
+    margin-left: 45px;
+    display: inline-block;
+    vertical-align: top;
+    width: 300px; /* Pas de breedte aan indien nodig */
+}
+
+.system-requirements {
+    border: 2px solid black;
+    border-radius: 0px 0px 0px 0px;
+    padding: 10px;
+    width: 600px; /* Pas de breedte aan indien nodig */
+}
+
+.reviews {
+    border: 2px solid black;
+    border-radius: 0px 0px 0px 0px;
+    padding: 10px;
+    width: 600px; /* Pas de breedte aan indien nodig */
 }
