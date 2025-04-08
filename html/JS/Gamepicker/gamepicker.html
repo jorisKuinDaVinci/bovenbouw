@@ -11,6 +11,7 @@
     <header>
         <h1>Game Picker</h1>
     </header>
+
     <nav>
         <ul class="linkjes">
             <li class="link"><a href="index.html">Home</a></li>
@@ -19,8 +20,47 @@
             <li class="link"><a href="pcbuildingsimulator.html">PC Building Simulator</a></li>
         </ul>
     </nav>
+
+    <main>
+        <!-- Filters -->
+        <section>
+            <h2>Filters</h2>
+            <label for="price-filter">Max prijs (€):</label>
+            <input type="number" id="price-filter" placeholder="Bijv. 30"><br><br>
+
+            <label for="genre-filter">Genre:</label>
+            <select id="genre-filter">
+                <option value="">Alle genres</option>
+                <!-- Genres worden dynamisch toegevoegd -->
+            </select><br><br>
+
+            <label for="rating-filter">Minimale rating (1-5):</label>
+            <input type="number" id="rating-filter" placeholder="Bijv. 3" min="1" max="5"><br><br>
+
+            <button id="apply-filters">Toon resultaten</button>
+            <button id="calculate-price">Bereken prijs</button>
+        </section>
+
+        <!-- Totaaloverzicht van games -->
+        <section id="game-overview">
+            <!-- Wordt dynamisch gevuld met spellen -->
+        </section>
+
+        <!-- Winkelmandje -->
+        <section id="shopping-cart" style="display: none;">
+            <h2>Winkelmandje</h2>
+            <ul id="cart-items">
+                <!-- Toegevoegde spellen komen hier -->
+            </ul>
+            <p id="total-price">Totale prijs: €0.00</p>
+            <button id="back-to-overview">Terug naar overzicht</button>
+        </section>
+    </main>
+
     <footer>
         <p>&copy; 2025 Game Catalogus</p>
     </footer>
+
+    <script src="scripts/gamepicker.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-var games = [
+[
     {
         "title": "Counter-Strike: Global Offensive",
         "price": 0.00,
@@ -13,7 +13,7 @@ var games = [
     },
     {
         "title": "Goose Goose Duck",
-        "price": 4,99,
+        "price": 4.99,
         "genre": "Action",
         "rating": 2
     },
@@ -88,6 +88,7 @@ var games = [
         "price": 29.99,
         "genre": "Simulation",
         "rating": 3
+    },
     {
         "title": "Football Manager 2023",
         "price": 59.99,
