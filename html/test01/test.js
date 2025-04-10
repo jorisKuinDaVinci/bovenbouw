@@ -4,7 +4,7 @@ var nameList = ["Piet", "Henk", "Pablo", "Escobar", "Bob", "Corbijn"]
 button.addEventListener("click", createElementsFromList)
 
 function createElementsFromList() {
-        for (let i = 0; i < nameList.length; i++) {
+        for (let i in nameList) {
             let newButton = document.createElement("input")
             newButton.setAttribute("type", "button");
             newButton.setAttribute("value", nameList[i]);
