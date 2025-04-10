@@ -1,32 +1,24 @@
-// Ophalen van de JSON-data (plaats dit in je script-tag of aparte JS-bestand)
-fetch("games.json")
-    .then((response) => response.json())
-    .then((data) => {
-        games = data;
-        displayGames(games);
-        populateGenres(games);
-    });
-
-// Laad games in vanuit een JSON-bestand
 let games = [];
 let cart = [];
 
-// Elementreferenties
 const overviewSection = document.getElementById('game-overview');
 const cartSection = document.getElementById('shopping-cart');
 const cartItems = document.getElementById('cart-items');
 const totalPriceElement = document.getElementById('total-price');
 const genreFilter = document.getElementById('genre-filter');
 
-// Initialiseren
+// Data laden vanuit extern JSON-bestand
+fetch('games.json')
+    .then(response => response.json())
+    .then(data => {
+        games = data;
+        fillGenreDropdown();
+        renderGames(games);
+    });
+
 document.getElementById('apply-filters').addEventListener('click', applyFilters);
 document.getElementById('calculate-price').addEventListener('click', showCart);
 document.getElementById('back-to-overview').addEventListener('click', showOverview);
-
-function init() {
-    fillGenreDropdown();
-    renderGames(games);
-}
 
 function fillGenreDropdown() {
     const genres = [...new Set(games.map(game => game.genre))];
@@ -104,6 +96,3 @@ function removeFromCart(index) {
     cart.splice(index, 1);
     updateCart();
 }
-
-// Starten
-init();
