@@ -14,11 +14,12 @@ fetch('games.json')
         games = data;
         fillGenreDropdown();
         renderGames(games);
-    });
 
-document.getElementById('apply-filters').addEventListener('click', applyFilters);
-document.getElementById('calculate-price').addEventListener('click', showCart);
-document.getElementById('back-to-overview').addEventListener('click', showOverview);
+        // Zet je event listeners pas nadat de data geladen is:
+        document.getElementById('apply-filters').addEventListener('click', applyFilters);
+        document.getElementById('calculate-price').addEventListener('click', showCart);
+        document.getElementById('back-to-overview').addEventListener('click', showOverview);
+    });
 
 function fillGenreDropdown() {
     const genres = [...new Set(games.map(game => game.genre))];
