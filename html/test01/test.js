@@ -4,16 +4,16 @@ var nameList = ["Piet", "Henk", "Pablo", "Escobar", "Bob", "Corbijn"]
 button.addEventListener("click", createElementsFromList)
 
 function createElementsFromList() {
-        for (let i in nameList) {
+    nameList.forEach(function(value) {
             let newButton = document.createElement("input")
             newButton.setAttribute("type", "button");
-            newButton.setAttribute("value", nameList[i]);
+            newButton.setAttribute("value", value);
             newButton.classList.add("button")
             newButton.addEventListener("click", function(){ 
-                andereFunction(nameList[i]);
+                andereFunction(value);
             });
             document.boby.appendChild(newButton);
-        }
+    })
 
 }
 
