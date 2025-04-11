@@ -35,8 +35,8 @@ const games = [
 ];
 
 let cart = [];
+const gameList = document.getElementById("gameList");
 
-const overviewSection = document.getElementById('game-overview');
 const cartSection = document.getElementById('shopping-cart');
 const cartItems = document.getElementById('cart-items');
 const totalPriceElement = document.getElementById('total-price');
@@ -50,78 +50,80 @@ fillGenreDropdown();
 renderGames(games);
 
 function fillGenreDropdown() {
-    const genres = [...new Set(games.map(game => game.genre))];
-    genres.forEach(genre => {
-        const option = document.createElement('option');
-        option.value = genre;
-        option.textContent = genre;
-        genreFilter.appendChild(option);
+function fillGenres() {
+    const genres = [...new Set(games.map(g => g.genre))];
+    genres.forEach(g => {
+        const opt = document.createElement("option");
+        opt.value = g;
+        opt.textContent = g;
+        genreFilter.appendChild(opt);
     });
 }
 
-function renderGames(gameList) {
-    overviewSection.innerHTML = '';
-    gameList.forEach(game => {
-        const div = document.createElement('div');
-        div.className = 'game';
+function renderGames(list) {
+    gameList.innerHTML = "";
+    list.forEach((game, index) => {
+        const div = document.createElement("div");
+        div.className = "game-item";
         div.innerHTML = `
-            <h3>${game.title}</h3>
-            <p>Prijs: €${game.price.toFixed(2)}</p>
-            <p>Genre: ${game.genre}</p>
-            <p>Rating: ${game.rating}</p>
-            <button onclick="addToCart('${game.title}')">Toevoegen aan winkelmandje</button>
+            <strong>${game.title}</strong><br>
+            Genre: ${game.genre}<br>
+            Prijs: €${game.price.toFixed(2)}<br>
+            Rating: ${game.rating}<br>
+            <button onclick="addToCart(${index})">Voeg toe</button>
         `;
-        overviewSection.appendChild(div);
+        gameList.appendChild(div);
     });
 }
 
-function addToCart(title) {
-    const game = games.find(g => g.title === title);
-    if (!cart.includes(game)) {
-        cart.push(game);
-        alert(`${title} is toegevoegd aan je winkelmandje.`);
+function addToCart(index) {
+    const game = games[index];
+    if (!cartData.includes(game)) {
+        cartData.push(game);
+        alert(`${game.title} toegevoegd aan je winkelmandje.`);
     } else {
-        alert(`${title} zit al in je winkelmandje.`);
+        alert(`${game.title} zit al in je winkelmandje.`);
     }
 }
 
-function applyFilters() {
-    const maxPrice = parseFloat(document.getElementById('price-filter').value) || Infinity;
-    const selectedGenre = genreFilter.value;
-    const minRating = parseInt(document.getElementById('rating-filter').value) || 0;
+document.getElementById("applyFilters").addEventListener("click", () => {
+    const max = parseFloat(priceFilter.value) || Infinity;
+    const genre = genreFilter.value;
+    const minRating = parseInt(ratingFilter.value) || 0;
 
-    const filtered = games.filter(game =>
-        game.price <= maxPrice &&
-        (selectedGenre === '' || game.genre === selectedGenre) &&
-        game.rating >= minRating
+    const filtered = games.filter(g =>
+        g.price <= max &&
+        (genre === "" || g.genre === genre) &&
+        g.rating >= minRating
     );
     renderGames(filtered);
-}
+});
 
-function showCart() {
-    overviewSection.style.display = 'none';
-    cartSection.style.display = 'block';
-    updateCart();
-}
+document.getElementById("calculatePrice").addEventListener("click", () => {
+    overview.style.display = "none";
+    cart.style.display = "block";
+    renderCart();
+});
 
-function showOverview() {
-    cartSection.style.display = 'none';
-    overviewSection.style.display = 'block';
-}
+document.getElementById("backToOverview").addEventListener("click", () => {
+    overview.style.display = "block";
+    cart.style.display = "none";
+});
 
-function updateCart() {
-    cartItems.innerHTML = '';
+function renderCart() {
+    cartItems.innerHTML = "";
     let total = 0;
-    cart.forEach((game, index) => {
-        const li = document.createElement('li');
-        li.innerHTML = `${game.title} - €${game.price.toFixed(2)} <button onclick="removeFromCart(${index})">Verwijder</button>`;
-        cartItems.appendChild(li);
+    cartData.forEach((game, i) => {
+        const div = document.createElement("div");
+        div.className = "cart-item";
+        div.innerHTML = `${game.title} - €${game.price.toFixed(2)} <button onclick="removeFromCart(${i})">Verwijder</button>`;
+        cartItems.appendChild(div);
         total += game.price;
     });
-    totalPriceElement.textContent = `Totale prijs: €${total.toFixed(2)}`;
+    totalPrice.textContent = `Totaal: €${total.toFixed(2)}`;
 }
 
 function removeFromCart(index) {
-    cart.splice(index, 1);
-    updateCart();
+    cartData.splice(index, 1);
+    renderCart();
 }
