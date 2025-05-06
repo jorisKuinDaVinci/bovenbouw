@@ -51,13 +51,14 @@ window.onload = () => {
     renderGames(games);
 };
 
+// fillGenres():
 function fillGenres() {
-    const genres = [...new Set(games.map(g => g.genre))];
-    genres.forEach(g => {
-        const opt = document.createElement("option");
-        opt.value = g;
-        opt.textContent = g;
-        genreFilter.appendChild(opt);
+    const genres = [...new Set(games.map(game => game.genre))];
+    genres.forEach(genre => { // deze 'genre' bestaat alleen binnen deze forEach
+        const genreOption = document.createElement("option");
+        genreOption.value = genre;
+        genreOption.textContent = genre;
+        genreFilter.appendChild(genreOption);
     });
 }
 
@@ -96,15 +97,16 @@ function addToCart(index) {
     }
 }
 
+// event listener (andere scope):
 document.getElementById("applyFilters").addEventListener("click", () => {
     const max = parseFloat(priceFilter.value) || Infinity;
-    const genre = genreFilter.value;
+    const genre = genreFilter.value; // deze 'genre' is een aparte variabele
     const minRating = parseInt(ratingFilter.value) || 0;
 
-    const filtered = games.filter(g =>
-        g.price <= max &&
-        (genre === "" || g.genre === genre) &&
-        g.rating >= minRating
+    const filtered = games.filter(game =>
+        game.price <= max &&
+        (genre === "" || game.genre === genre) &&
+        game.rating >= minRating
     );
     renderGames(filtered);
 });
