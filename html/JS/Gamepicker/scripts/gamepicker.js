@@ -79,7 +79,16 @@ function renderGames(list) {
 
 function addToCart(index) {
     const game = games[index];
-    if (!cartData.includes(game)) {
+    let isInCart = false;
+    
+    // Gebruik forEach om te controleren of het spel al in de winkelmand zit
+    cartData.forEach((cartGame) => {
+        if (cartGame.title === game.title) {
+            isInCart = true;
+        }
+    });
+
+    if (!isInCart) {
         cartData.push(game);
         alert(`${game.title} toegevoegd aan je winkelmandje.`);
     } else {
