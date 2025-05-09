@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Game Picker</h1>
+        <h1 class="gamepickertext">Game Picker</h1>
     </header>
 
     <nav>
@@ -21,36 +21,18 @@
         </ul>
     </nav>
 
-    <main>
-        <!-- Overzicht -->
-        <div id="overview">
-            <section>
-                <h2>Filteropties</h2>
-                <label for="priceFilter">Prijs onder: </label>
-                <input type="number" id="priceFilter" placeholder="30">
+    <h1>Overzicht</h1>
 
-                <label for="genreFilter">Genre:</label>
-                <select id="genreFilter">
-                    <option value="">Alles</option>
-                </select>
+    <Select>
+        <option value="genre1">genre1</option>
+        <option value="genre1">genre2</option>
+        <option value="genre1">genre3</option>
+    </Select>
+    <input name="price" type="text">
+    <input type="submit">
 
-                <label for="ratingFilter">Min. rating:</label>
-                <input type="number" id="ratingFilter" min="1" max="5" placeholder="4">
-
-                <button id="applyFilters">Toon resultaten</button>
-            </section>
-
-            <div id="gameList" class="game-list"></div>
-            <button id="calculatePrice">Bereken prijs</button>
-        </div>
-
-        <!-- Winkelmand -->
-        <div id="cart" class="cart-view" style="display: none;">
-            <h2>Winkelmandje</h2>
-            <div id="cartItems"></div>
-            <p id="total-price"></p>
-            <button id="backToOverview">Terug naar overzicht</button>
-        </div>
+    <main id="alleGames" style="border:1px solid black">
+       
     </main>
 
     <footer>

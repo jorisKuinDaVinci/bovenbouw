@@ -71,7 +71,11 @@ main {
     padding: 20px;
 }
 
-h1, h2, h3 {
+h2, h3 {
+    font-size: 23px;
+}
+
+.gamepickertext {
     font-size: 23px;
 }
 
