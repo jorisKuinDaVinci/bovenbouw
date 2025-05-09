@@ -196,15 +196,35 @@ let games = [
 let winkelMand = [];
 
 let mainContainer = document.getElementById("alleGames");
-console.log(mainContainer);
+//console.log(mainContainer);
+let winkelMandContainer = document.getElementById("winkelMand");
+let cartGames = document.getElementById("cartGames");
+
+console.log(winkelMandContainer);
+
+let switchCartButton = document.getElementById("switchCart");
+switchCartButton.addEventListener("click", function(){
+    //winkelmand laten zien (visible class)
+    winkelMandContainer.classList.toggle("visible");
+    winkelMandContainer.classList.toggle("invisible");
+    //mainContainer onzichtbaar maken
+    mainContainer.classList.toggle("visible");
+    mainContainer.classList.toggle("invisible");
+
+    //spellen in winkermandContainer toevoegen
+    fillCart()
+    
+
+    switchCartButton.innerText="zie overzicht";
+
+    switchCartButton.innerText="zie winkelmand";
+})
 
 //mijn code
 games.forEach(function(game) {
     console.log(game.title)
-
     let newGroupElem = document.createElement("section");
 
-    
     let newTitleElem = document.createElement("h2");
     newTitleElem.innerText = game.title;
     newGroupElem.appendChild(newTitleElem)
@@ -216,7 +236,10 @@ games.forEach(function(game) {
     let newButtonElem = document.createElement("button")
     newButtonElem.innerText = "Toevoegen aan winkelwagen";
     newButtonElem.addEventListener("click", function(){
-        alert("je hebt op de knop geklikt voor het spel: " + game.title);
+        //alert("je hebt op de knop geklikt voor het spel: " + game.title)
+        //bouw een functie voor het toevoegen van een game aan de winkelmand
+        addItem(game)
+        console.log(winkelMand)
     })
     newGroupElem.appendChild(newButtonElem)
 
@@ -224,3 +247,42 @@ games.forEach(function(game) {
     mainContainer.appendChild(newGroupElem)
 
 })
+
+function addItem(gameToAdd) {
+    //console.log(gameToAdd);
+    winkelMand.push(gameToAdd);
+}
+
+function fillCart() {
+    //haal de zichtbare lijst leeg
+    cartGames.innerHTML = "";
+    // vul de winkelmand met de spellen uit de lijst
+    winkelMand.forEach(function(game) {
+        let newGroupElem = document.createElement("section");
+
+        let newTitleElem = document.createElement("h2");
+        newTitleElem.innerText = game.title;
+        newGroupElem.appendChild(newTitleElem)
+
+        let newPriceElem = document.createElement("span")
+        newPriceElem.innerText = game.price;
+        newGroupElem.appendChild(newPriceElem)
+
+        let newButtonElem = document.createElement("button")
+        newButtonElem.innerText = "verwijder uit winkelmand";
+        newButtonElem.addEventListener("click", function(){
+            //alert("je hebt op de knop geklikt voor het spel: " + game.title)
+            //bouw een functie voor het toevoegen van een game aan de winkelmand
+            removeItem(game)
+        })
+        newGroupElem.appendChild(newButtonElem)
+
+
+        cartGames.appendChild(newGroupElem)
+
+    })
+}
+
+function removeItem() {
+    // je wilt het spel verwijderen uit de winkelmand
+}

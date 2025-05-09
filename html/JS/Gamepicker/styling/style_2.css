@@ -1,0 +1,19 @@
+body{
+
+}
+
+.invisible{
+    display: none;
+}
+
+.visible{
+    display: block;
+}
+
+.green{
+    color: green;
+}
+
+#winkelMand{
+    display: none;
+}
