@@ -199,6 +199,9 @@ let mainContainer = document.getElementById("alleGames");
 //console.log(mainContainer);
 let winkelMandContainer = document.getElementById("winkelMand");
 let cartGames = document.getElementById("cartGames");
+let prijsContainer = document.getElementById("prijs");
+let priceFilter = document.getElementById("priceFilter");
+let priceFilterButton = document.getElementById("priceFilterButton");
 
 console.log(winkelMandContainer);
 
@@ -213,12 +216,29 @@ switchCartButton.addEventListener("click", function(){
 
     //spellen in winkermandContainer toevoegen
     fillCart()
+    //bereken en toon prijs
+    calculateShowPrice()
     
 
     switchCartButton.innerText="zie overzicht";
 
     switchCartButton.innerText="zie winkelmand";
 })
+
+
+priceFilterButton.addEventListener("click", function(){
+    //filter spellen op prijs
+    //haal filterprijs op
+    let lowerThanPrice = priceFilter.value
+
+    let filteredGames = games.filter(function(priceToCheck){
+        return priceToCheck.price <= lowerThanPrice;
+    })
+
+    console.log(filteredGames);
+    // genereer elementen op het scherm met de filered games
+})
+
 
 //mijn code
 games.forEach(function(game) {
@@ -285,4 +305,15 @@ function fillCart() {
 
 function removeItem() {
     // je wilt het spel verwijderen uit de winkelmand
+    alert("je wilt het spelletje verwijderen")
+}
+
+function calculateShowPrice() {
+    let prijs = 0;
+    winkelMand.forEach(function(cartItem) {
+        console.log("item uit winkelmand = " + cartItem.price)
+        prijs += cartItem.price;
+        //prijs = prijs + cartItem.price;
+    });
+    prijsContainer.innerText = prijs
 }
