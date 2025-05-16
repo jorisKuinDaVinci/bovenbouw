@@ -199,6 +199,7 @@ let mainContainer = document.getElementById("alleGames");
 //console.log(mainContainer);
 let winkelMandContainer = document.getElementById("winkelMand");
 let cartGames = document.getElementById("cartGames");
+console.log(cartGames);
 let prijsContainer = document.getElementById("prijs");
 let priceFilter = document.getElementById("priceFilter");
 let priceFilterButton = document.getElementById("priceFilterButton");
@@ -208,6 +209,7 @@ console.log(winkelMandContainer);
 let switchCartButton = document.getElementById("switchCart");
 switchCartButton.addEventListener("click", function(){
     //winkelmand laten zien (visible class)
+    console.log("Show cart clicked");
     winkelMandContainer.classList.toggle("visible");
     winkelMandContainer.classList.toggle("invisible");
     //mainContainer onzichtbaar maken
@@ -220,8 +222,11 @@ switchCartButton.addEventListener("click", function(){
     calculateShowPrice()
     
 
-    switchCartButton.innerText = "zie overzicht";
-    switchCartButton.innerText = "zie winkelmand";
+    if (winkelMandContainer.classList.contains("visible")) {
+        switchCartButton.innerText = "zie overzicht";
+    } else {
+        switchCartButton.innerText = "zie winkelmand";
+    }
 })
 
 
@@ -240,7 +245,6 @@ priceFilterButton.addEventListener("click", function(){
     //genereer elementen
 })
 
-
 //mijn code
 renderGameList(games, mainContainer, true);
 
@@ -250,10 +254,12 @@ function addItem(gameToAdd) {
 }
 
 function fillCart() {
+    console.log("Winkelmand inhoud:", winkelMand);
     //haal de zichtbare lijst leeg
     cartGames.innerHTML = "";
     // vul de winkelmand met de spellen uit de lijst
     renderGameList(winkelMand, cartGames, false);
+    console.log("cartGames innerHTML after render:", cartGames.innerHTML);
 }
 
 function removeItem(gameToRemove) {
@@ -283,7 +289,7 @@ function calculateShowPrice() {
 }
 
 function renderGameList(listToRender, containerInWichToRender, isNormalRender) {
-    mainContainer.innerHTML = "";
+    containerInWichToRender.innerHTML = "";
     listToRender.forEach(function(game) {
         console.log(game.title)
         let newGroupElem = document.createElement("section");
@@ -318,7 +324,6 @@ function renderGameList(listToRender, containerInWichToRender, isNormalRender) {
             })
             newGroupElem.appendChild(newButtonElem)
         }
-
-    })
-    containerInWichToRender.appendChild(newGroupElem);
+        containerInWichToRender.appendChild(newGroupElem);
+    });
 }
