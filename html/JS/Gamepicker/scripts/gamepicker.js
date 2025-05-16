@@ -220,9 +220,8 @@ switchCartButton.addEventListener("click", function(){
     calculateShowPrice()
     
 
-    switchCartButton.innerText="zie overzicht";
-
-    switchCartButton.innerText="zie winkelmand";
+    switchCartButton.innerText = "zie overzicht";
+    switchCartButton.innerText = "zie winkelmand";
 })
 
 
@@ -233,40 +232,17 @@ priceFilterButton.addEventListener("click", function(){
 
     let filteredGames = games.filter(function(priceToCheck){
         return priceToCheck.price <= lowerThanPrice;
-    })
+    });
 
     console.log(filteredGames);
-    // genereer elementen op het scherm met de filered games
+    renderGameList(filteredGames, mainContainer);
+
+    //genereer elementen
 })
 
 
 //mijn code
-games.forEach(function(game) {
-    console.log(game.title)
-    let newGroupElem = document.createElement("section");
-
-    let newTitleElem = document.createElement("h2");
-    newTitleElem.innerText = game.title;
-    newGroupElem.appendChild(newTitleElem)
-
-    let newPriceElem = document.createElement("span")
-    newPriceElem.innerText = game.price;
-    newGroupElem.appendChild(newPriceElem)
-
-    let newButtonElem = document.createElement("button")
-    newButtonElem.innerText = "Toevoegen aan winkelwagen";
-    newButtonElem.addEventListener("click", function(){
-        //alert("je hebt op de knop geklikt voor het spel: " + game.title)
-        //bouw een functie voor het toevoegen van een game aan de winkelmand
-        addItem(game)
-        console.log(winkelMand)
-    })
-    newGroupElem.appendChild(newButtonElem)
-
-
-    mainContainer.appendChild(newGroupElem)
-
-})
+renderGameList(games, mainContainer, true);
 
 function addItem(gameToAdd) {
     //console.log(gameToAdd);
@@ -277,35 +253,23 @@ function fillCart() {
     //haal de zichtbare lijst leeg
     cartGames.innerHTML = "";
     // vul de winkelmand met de spellen uit de lijst
-    winkelMand.forEach(function(game) {
-        let newGroupElem = document.createElement("section");
-
-        let newTitleElem = document.createElement("h2");
-        newTitleElem.innerText = game.title;
-        newGroupElem.appendChild(newTitleElem)
-
-        let newPriceElem = document.createElement("span")
-        newPriceElem.innerText = game.price;
-        newGroupElem.appendChild(newPriceElem)
-
-        let newButtonElem = document.createElement("button")
-        newButtonElem.innerText = "verwijder uit winkelmand";
-        newButtonElem.addEventListener("click", function(){
-            //alert("je hebt op de knop geklikt voor het spel: " + game.title)
-            //bouw een functie voor het toevoegen van een game aan de winkelmand
-            removeItem(game)
-        })
-        newGroupElem.appendChild(newButtonElem)
-
-
-        cartGames.appendChild(newGroupElem)
-
-    })
+    renderGameList(winkelMand, cartGames, false);
 }
 
-function removeItem() {
-    // je wilt het spel verwijderen uit de winkelmand
-    alert("je wilt het spelletje verwijderen")
+function removeItem(gameToRemove) {
+    alert("je wilt het spelletje " + gameToRemove.title + " verwijderen")
+    //verwijder spel met title counterstrike uit de lijst
+
+    //loop over lijst en cotroleer naam
+    winkelMand.forEach(function(game, index) {
+        if(gameToRemove.title == game.title){
+            console.log(index)
+            winkelMand.splice(index, 1)
+        }
+    })
+    cartGames.innerHTML = "";
+    renderGameList(winkelMand, cartGames, false);
+    calculateShowPrice()
 }
 
 function calculateShowPrice() {
@@ -316,4 +280,45 @@ function calculateShowPrice() {
         //prijs = prijs + cartItem.price;
     });
     prijsContainer.innerText = prijs
+}
+
+function renderGameList(listToRender, containerInWichToRender, isNormalRender) {
+    mainContainer.innerHTML = "";
+    listToRender.forEach(function(game) {
+        console.log(game.title)
+        let newGroupElem = document.createElement("section");
+
+        let newTitleElem = document.createElement("h2");
+        newTitleElem.innerText = game.title;
+        newGroupElem.appendChild(newTitleElem)
+
+        let newPriceElem = document.createElement("span")
+        newPriceElem.innerText = game.price;
+        newGroupElem.appendChild(newPriceElem)
+
+        //alleen voor normale render
+        if(isNormalRender){
+            let newButtonElem = document.createElement("button")
+            newButtonElem.innerText = "Toevoegen aan winkelwagen";
+            newButtonElem.addEventListener("click", function(){
+                //alert("je hebt op de knop geklikt voor het spel: " + game.title)
+                //bouw een functie voor het toevoegen van een game aan de winkelmand
+                addItem(game)
+            })
+            newGroupElem.appendChild(newButtonElem)
+        }
+        else{
+            //dit voor winkelmandrender
+            let newButtonElem = document.createElement("button")
+            newButtonElem.innerText = "verwijder uit winkelwagen";
+            newButtonElem.addEventListener("click", function(){
+                //alert("je hebt op de knop geklikt voor het spel: " + game.title)
+                //bouw een functie voor het toevoegen van een game aan de winkelmand
+                removeItem(game)
+            })
+            newGroupElem.appendChild(newButtonElem)
+        }
+
+    })
+    containerInWichToRender.appendChild(newGroupElem);
 }
