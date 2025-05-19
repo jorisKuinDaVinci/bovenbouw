@@ -2,18 +2,21 @@ body{
 
 }
 
-.invisible{
-    display: none;
+.visible {
+    display: block;
 }
 
-.visible{
-    display: block;
+.invisible {
+    display: none;
 }
 
 .green{
     color: green;
 }
 
-#winkelMand{
-    display: none;
+#winkelMand {
+    padding: 1em;
+    border: 2px dashed #888;
+    background-color: #f8f8f8;
+    margin-top: 1em;
 }

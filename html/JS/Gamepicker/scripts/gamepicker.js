@@ -296,34 +296,38 @@ function renderGameList(listToRender, containerInWichToRender, isNormalRender) {
 
         let newTitleElem = document.createElement("h2");
         newTitleElem.innerText = game.title;
-        newGroupElem.appendChild(newTitleElem)
+        newGroupElem.appendChild(newTitleElem);
 
-        let newPriceElem = document.createElement("span")
-        newPriceElem.innerText = game.price;
-        newGroupElem.appendChild(newPriceElem)
+        let newPriceElem = document.createElement("span");
+        newPriceElem.innerText = "€ " + game.price.toFixed(2);
+        newGroupElem.appendChild(newPriceElem);
 
-        //alleen voor normale render
-        if(isNormalRender){
-            let newButtonElem = document.createElement("button")
+        // Genre
+        let newGenreElem = document.createElement("p");
+        newGenreElem.innerText = "Genre: " + game.genre;
+        newGroupElem.appendChild(newGenreElem);
+
+        // Rating
+        let newRatingElem = document.createElement("p");
+        newRatingElem.innerText = "Rating: " + game.rating + " / 5";
+        newGroupElem.appendChild(newRatingElem);
+
+        // Knoppen afhankelijk van context (overzicht of winkelmand)
+        let newButtonElem = document.createElement("button");
+        if (isNormalRender) {
             newButtonElem.innerText = "Toevoegen aan winkelwagen";
-            newButtonElem.addEventListener("click", function(){
-                //alert("je hebt op de knop geklikt voor het spel: " + game.title)
-                //bouw een functie voor het toevoegen van een game aan de winkelmand
-                addItem(game)
-            })
-            newGroupElem.appendChild(newButtonElem)
+            newButtonElem.addEventListener("click", function() {
+                addItem(game);
+            });
+        } else {
+            newButtonElem.innerText = "Verwijder uit winkelwagen";
+            newButtonElem.addEventListener("click", function() {
+                removeItem(game);
+            });
         }
-        else{
-            //dit voor winkelmandrender
-            let newButtonElem = document.createElement("button")
-            newButtonElem.innerText = "verwijder uit winkelwagen";
-            newButtonElem.addEventListener("click", function(){
-                //alert("je hebt op de knop geklikt voor het spel: " + game.title)
-                //bouw een functie voor het toevoegen van een game aan de winkelmand
-                removeItem(game)
-            })
-            newGroupElem.appendChild(newButtonElem)
-        }
+        newGroupElem.appendChild(newButtonElem);
+
+        // Voeg alle elementen toe aan de container
         containerInWichToRender.appendChild(newGroupElem);
     });
 }
