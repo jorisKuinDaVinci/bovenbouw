@@ -318,7 +318,7 @@ function renderGameList(listToRender, containerInWichToRender, isNormalRender) {
 
         // Rating
         let newRatingElem = document.createElement("p");
-        newRatingElem.innerText = "Rating: " + game.rating + " / 5";
+        newRatingElem.innerText = "Rating: " + game.rating;
         newGroupElem.appendChild(newRatingElem);
 
         // Knoppen afhankelijk van context (overzicht of winkelmand)
