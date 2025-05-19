@@ -204,6 +204,7 @@ let prijsContainer = document.getElementById("prijs");
 let priceFilter = document.getElementById("priceFilter");
 let priceFilterButton = document.getElementById("priceFilterButton");
 let filterSelect = document.getElementById('filterSelect');
+let calculatePriceButton = document.getElementById("calculatePriceButton");
 
 console.log(winkelMandContainer);
 
@@ -232,22 +233,17 @@ switchCartButton.addEventListener("click", function(){
 
 
 priceFilterButton.addEventListener("click", function(event) {
-    event.preventDefault(); // Voorkomt eventueel submit gedrag
+    event.preventDefault();
 
-    // Lees prijsfilter en converteer
     let lowerThanPrice = parseFloat(priceFilter.value);
-
-    // Lees genre filter en maak lowercase voor case insensitive check
     let selectedGenre = filterSelect.value.toLowerCase();
 
-    // Filter games op genre en prijs
     let filteredGames = games.filter(function(game){
         let genreMatch = selectedGenre === 'alles' || game.genre.toLowerCase() === selectedGenre;
-        let priceMatch = game.price <= lowerThanPrice;
+        let priceMatch = isNaN(lowerThanPrice) ? true : game.price <= lowerThanPrice;
         return genreMatch && priceMatch;
     });
 
-    console.log(filteredGames);
     renderGameList(filteredGames, mainContainer, true);
 })
 
@@ -301,6 +297,25 @@ function calculateShowPrice() {
     });
     prijsContainer.innerText = "Totaalprijs: € " + prijs.toFixed(2);
 }
+
+calculatePriceButton.addEventListener("click", function() {
+    //Winkelmand zichtbaar maken
+    winkelMandContainer.classList.add("visible");
+    winkelMandContainer.classList.remove("invisible");
+
+    //Overzicht met alle spellen verbergen
+    mainContainer.classList.remove("visible");
+    mainContainer.classList.add("invisible");
+
+    //Winkelmand vullen
+    fillCart();
+
+    //Prijs berekenen en tonen
+    calculateShowPrice();
+
+    //de switchCart knop tekst aanpassen
+    switchCartButton.innerText = "Zie overzicht";
+})
 
 function renderGameList(listToRender, containerInWichToRender, isNormalRender) {
     containerInWichToRender.innerHTML = "";
