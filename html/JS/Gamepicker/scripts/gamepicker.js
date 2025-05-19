@@ -203,6 +203,7 @@ console.log(cartGames);
 let prijsContainer = document.getElementById("prijs");
 let priceFilter = document.getElementById("priceFilter");
 let priceFilterButton = document.getElementById("priceFilterButton");
+let filterSelect = document.getElementById('filterSelect');
 
 console.log(winkelMandContainer);
 
@@ -230,19 +231,24 @@ switchCartButton.addEventListener("click", function(){
 })
 
 
-priceFilterButton.addEventListener("click", function(){
-    //filter spellen op prijs
-    //haal filterprijs op
-    let lowerThanPrice = priceFilter.value
+priceFilterButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Voorkomt eventueel submit gedrag
 
-    let filteredGames = games.filter(function(priceToCheck){
-        return priceToCheck.price <= lowerThanPrice;
+    // Lees prijsfilter en converteer
+    let lowerThanPrice = parseFloat(priceFilter.value);
+
+    // Lees genre filter en maak lowercase voor case insensitive check
+    let selectedGenre = filterSelect.value.toLowerCase();
+
+    // Filter games op genre en prijs
+    let filteredGames = games.filter(function(game){
+        let genreMatch = selectedGenre === 'alles' || game.genre.toLowerCase() === selectedGenre;
+        let priceMatch = game.price <= lowerThanPrice;
+        return genreMatch && priceMatch;
     });
 
     console.log(filteredGames);
-    renderGameList(filteredGames, mainContainer);
-
-    //genereer elementen
+    renderGameList(filteredGames, mainContainer, true);
 })
 
 //mijn code
