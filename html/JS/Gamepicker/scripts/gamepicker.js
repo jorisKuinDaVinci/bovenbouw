@@ -249,17 +249,25 @@ priceFilterButton.addEventListener("click", function(){
 renderGameList(games, mainContainer, true);
 
 function addItem(gameToAdd) {
-    //console.log(gameToAdd);
-    winkelMand.push(gameToAdd);
+    if (!winkelMand.some(game => game.title === gameToAdd.title)) {
+        winkelMand.push(gameToAdd);
+    } else {
+        alert("Dit spel zit al in je winkelmand!");
+    }
 }
 
 function fillCart() {
     console.log("Winkelmand inhoud:", winkelMand);
     //haal de zichtbare lijst leeg
     cartGames.innerHTML = "";
-    // vul de winkelmand met de spellen uit de lijst
-    renderGameList(winkelMand, cartGames, false);
-    console.log("cartGames innerHTML after render:", cartGames.innerHTML);
+    if (winkelMand.length === 0) {
+        cartGames.innerText = "Je winkelmand is leeg.";
+        prijsContainer.innerText = "Totaalprijs: € 0.00";
+    } else {
+        //vul de winkelmand met de spellen uit de lijst
+        renderGameList(winkelMand, cartGames, false);
+        calculateShowPrice();
+    }
 }
 
 function removeItem(gameToRemove) {
@@ -285,7 +293,7 @@ function calculateShowPrice() {
         prijs += cartItem.price;
         //prijs = prijs + cartItem.price;
     });
-    prijsContainer.innerText = prijs
+    prijsContainer.innerText = "Totaalprijs: € " + prijs.toFixed(2);
 }
 
 function renderGameList(listToRender, containerInWichToRender, isNormalRender) {
@@ -293,6 +301,7 @@ function renderGameList(listToRender, containerInWichToRender, isNormalRender) {
     listToRender.forEach(function(game) {
         console.log(game.title)
         let newGroupElem = document.createElement("section");
+        newGroupElem.classList.add(isNormalRender ? "game-overview" : "game-cart");
 
         let newTitleElem = document.createElement("h2");
         newTitleElem.innerText = game.title;
