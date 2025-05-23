@@ -76,7 +76,7 @@ h1, h2, h3 {
 }
 
 section {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     padding-bottom: 20px;
 }
 
@@ -125,9 +125,7 @@ section p em {
     border-radius: 0px 0px 0px 0px;
     padding: 10px;
     /* naar rechts van game-info */
-    margin-left: 45px;
-    display: inline-block;
-    vertical-align: top;
+    float: right;
     width: 300px; /* Pas de breedte aan indien nodig */
 }
 
@@ -143,50 +141,4 @@ section p em {
     border-radius: 0px 0px 0px 0px;
     padding: 10px;
     width: 600px; /* Pas de breedte aan indien nodig */
-}
-
-/* Winkelmandje */
-#cart {
-    border: 2px solid black;
-    border-radius: 0px;
-    padding: 20px;
-    width: 600px;
-    margin: 30px auto;
-    background-color: #f9f9f9;
-}
-
-#cart h2 {
-    margin-top: 0;
-    font-size: 23px;
-    text-align: center;
-}
-
-.cart-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border: 1px solid black;
-    margin-bottom: 10px;
-    background-color: white;
-}
-
-#total-price {
-    margin-top: 20px;
-    text-align: right;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-#reset-cart {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-#reset-cart:hover {
-    background-color: #333;
 }
