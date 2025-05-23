@@ -58,7 +58,7 @@ header {
 
 main {
     width: 1000px;
-    margin: 20px auto;
+    margin: 40px auto;
     /*margin: 20px auto;*/
     padding: 20px;
     text-align: left;
@@ -67,7 +67,7 @@ main {
 .intro {
     border: 2px solid black;
     /*border is rechthoekig. dit gebeurdt in de regel hieronder*/
-    border-radius: 0px 0px 0px 0px;
+    /*border-radius: 0px 0px 0px 0px;*/
     padding: 20px;
 }
 
@@ -125,7 +125,8 @@ section p em {
     border-radius: 0px 0px 0px 0px;
     padding: 10px;
     /* naar rechts van game-info */
-    float: right;
+    /*float: right;*/
+    display: inline-block;
     width: 300px; /* Pas de breedte aan indien nodig */
 }
 
