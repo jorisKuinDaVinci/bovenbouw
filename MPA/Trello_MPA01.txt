@@ -1,0 +1,68 @@
+Requirements:
+
+OPDRACHT: Bouw een MPA Jukebox webapplicatie met behulp van Laravel.
+
+Localhost-webserver stack: AMPPS.
+
+Zet een virtual domain / host op waarmee je je applicatie kan benaderen (lokale AMP stack via http://localhost ).
+
+Zet een Azure subdomain / host op waarmee je je applicatie kan benaderen.
+
+Gebruik een set Docker (of Sail) containers waarmee je je applicatie kan benaderen.
+
+Database: MySQL.
+
+Maak gebruik van een relationele database.
+
+Gebruik migrations om je tabellen te creëren en seeders om testdata in te laden.
+
+Backlog:
+
+Een bezoeker kan in de jukebox een genre overzicht zien met minimaal 5 muziek genres.
+
+Een bezoeker kan een liedjes overzicht oproepen voor een aan te wijzen genre.
+
+Een liedje heeft in ieder geval de volgende attributen / kolommen:
+
+name
+
+artist / band
+
+duration / length
+
+Een bezoeker kan de detailgegevens oproepen van een in het liedjes overzicht aan te wijzen liedje.
+
+Een bezoeker kan een liedje toevoegen aan de playlist.
+
+De playlist is tijdelijk. Na een bepaalde time-out zal de playlist verdwijnen.
+
+Een bezoeker kan een liedje verwijderen van de playlist.
+
+Een bezoeker kan een overzicht van de playlist aanroepen met daarin een berekening van de totale duur van de playlist.
+
+Een bezoeker kan zich registeren en aanmelden als gebruiker van de jukebox.
+
+Een gebruiker kan de playlist opslaan als bewaarde playlist met een te kiezen naam.
+
+Een gebruiker kan een overzicht opvragen van zijn opgeslagen playlists.
+
+Een gebruiker kan een opgeslagen playlist beheren.
+
+wijzigen naam van de opgeslagen / bewaarde playlist.
+
+toevoegen en verwijderen van liedjes.
+
+Leerdoelen (beoordelingscriteria):
+
+Je mag je specialiseren in frameworks voor een MPA of een SPA of beide. De te behalen leerdoelen en daarmee te beheersen concepten zijn afhankelijk van de gekozen specialisatie.
+
+Je hebt begrip van de onderstaande concepten.
+
+Je kunt de onderstaande concepten toepassen tijdens het ontwerp van een applicatie.
+
+Je kunt de onderstaande concepten toepassen in een geschikte programmeertaal tijdens de realisatie van een applicatie.
+
+Je kunt de functionaliteit van een applicatie zorgvuldig testen.
+
+Je kunt een eenvoudige test uitvoeren op de correcte werking van functionaliteit van een ander van een applicatie aan de hand van een backlog.
+
