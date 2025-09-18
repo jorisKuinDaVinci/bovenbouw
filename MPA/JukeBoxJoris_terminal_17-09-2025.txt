@@ -1,0 +1,364 @@
+root@Jorisschool:~# cd ~/JukeBoxJoris/JukeBoxJoris
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ./vendor/bin/sail up -d
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+[+] Running 6/6
+ ✔ Container jukeboxjoris-mysql-1         Started                                                                  0.9s
+ ✔ Container jukeboxjoris-selenium-1      Started                                                                  0.6s
+ ✔ Container jukeboxjoris-meilisearch-1   Started                                                                  0.9s
+ ✔ Container jukeboxjoris-redis-1         Started                                                                  0.8s
+ ✔ Container jukeboxjoris-mailpit-1       Started                                                                  0.8s
+ ✔ Container jukeboxjoris-laravel.test-1  Started                                                                  0.4s
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ./vendor/bin/sail shell
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+sail@ecaa8d32aaf2:/var/www/html$ exit
+exit
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ./vendor/bin/sail shell
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+sail@ecaa8d32aaf2:/var/www/html$ php artisan migrate
+
+   INFO  Nothing to migrate.
+
+sail@ecaa8d32aaf2:/var/www/html$ php artisan migrate:status
+
+  Migration name ...................................................................................... Batch / Status
+  0001_01_01_000000_create_users_table ....................................................................... [1] Ran
+  0001_01_01_000001_create_cache_table ....................................................................... [1] Ran
+  0001_01_01_000002_create_jobs_table ........................................................................ [1] Ran
+  2025_09_17_080017_create_songs_table ....................................................................... [2] Ran
+  2025_09_17_080437_create_genres_table ...................................................................... [3] Ran
+  2025_09_17_080444_create_saved_lists_table ................................................................. [3] Ran
+  2025_09_17_080451_create_saved_list_songs_table ............................................................ [3] Ran
+
+sail@ecaa8d32aaf2:/var/www/html$ php artisan make:seeder SongsTableSeeder
+
+   INFO  Seeder [database/seeders/SongsTableSeeder.php] created successfully.
+
+sail@ecaa8d32aaf2:/var/www/html$ php artisan db:seed
+
+   INFO  Seeding database.
+
+  Database\Seeders\SongsTableSeeder .......................................................................... RUNNING
+
+   Illuminate\Database\QueryException
+
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'album' in 'field list' (Connection: mysql, SQL: insert into `songs` (`album`, `artist`, `created_at`, `duration`, `genre`, `title`, `updated_at`) values (A Night at the Opera, Queen, 2025-09-17 12:53:46, 354, Rock, Bohemian Rhapsody, 2025-09-17 12:53:46), (Thriller, Michael Jackson, 2025-09-17 12:53:46, 293, Pop, Billie Jean, 2025-09-17 12:53:46), (Divide, Ed Sheeran, 2025-09-17 12:53:46, 263, Pop, Shape of You, 2025-09-17 12:53:46), (Nevermind, Nirvana, 2025-09-17 12:53:46, 301, Grunge, Smells Like Teen Spirit, 2025-09-17 12:53:46), (8 Mile, Eminem, 2025-09-17 12:53:46, 326, Hip-Hop, Lose Yourself, 2025-09-17 12:53:46))
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:824
+    820▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    821▕                 );
+    822▕             }
+    823▕
+  ➜ 824▕             throw new QueryException(
+    825▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    826▕             );
+    827▕         }
+    828▕     }
+
+      +6 vendor frames
+
+  7   database/seeders/SongsTableSeeder.php:15
+      Illuminate\Database\Query\Builder::insert()
+      +8 vendor frames
+
+  16  database/seeders/DatabaseSeeder.php:22
+      Illuminate\Database\Seeder::call()
+
+sail@ecaa8d32aaf2:/var/www/html$ php artisan make:model Song -mf
+
+   ErrorException
+
+  file_put_contents(/var/www/html/app/Models/Song.php): Failed to open stream: Permission denied
+
+  at vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:204
+    200▕      * @return int|bool
+    201▕      */
+    202▕     public function put($path, $contents, $lock = false)
+    203▕     {
+  ➜ 204▕         return file_put_contents($path, $contents, $lock ? LOCK_EX : 0);
+    205▕     }
+    206▕
+    207▕     /**
+    208▕      * Write the contents of a file, replacing it atomically if it already exists.
+
+      +16 vendor frames
+
+  17  artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+sail@ecaa8d32aaf2:/var/www/html$ sudo chown -R sail:sail /var/www/html
+bash: sudo: command not found
+sail@ecaa8d32aaf2:/var/www/html$ sudo chown -R sail:sail /var/www/html
+bash: sudo: command not found
+sail@ecaa8d32aaf2:/var/www/html$ php artisan make:model Song -mf
+
+   ErrorException
+
+  file_put_contents(/var/www/html/app/Models/Song.php): Failed to open stream: Permission denied
+
+  at vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:204
+    200▕      * @return int|bool
+    201▕      */
+    202▕     public function put($path, $contents, $lock = false)
+    203▕     {
+  ➜ 204▕         return file_put_contents($path, $contents, $lock ? LOCK_EX : 0);
+    205▕     }
+    206▕
+    207▕     /**
+    208▕      * Write the contents of a file, replacing it atomically if it already exists.
+
+      +16 vendor frames
+
+  17  artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+sail@ecaa8d32aaf2:/var/www/html$ exit
+exit
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# cd ~/JukeBoxJoris/JukeBoxJoris
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# chown -R $USER:$USER .
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ./vendor/bin/sail down
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+[+] Running 7/7
+ ✔ Container jukeboxjoris-laravel.test-1  Removed                                                                  1.0s
+ ✔ Container jukeboxjoris-mailpit-1       Removed                                                                  0.8s
+ ✔ Container jukeboxjoris-redis-1         Removed                                                                  0.5s
+ ✔ Container jukeboxjoris-mysql-1         Removed                                                                  2.1s
+ ✔ Container jukeboxjoris-meilisearch-1   Removed                                                                  0.4s
+ ✔ Container jukeboxjoris-selenium-1      Removed                                                                  4.9s
+ ✔ Network jukeboxjoris_sail              Removed                                                                  0.4s
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ./vendor/bin/sail up -d
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+[+] Running 7/7
+ ✔ Network jukeboxjoris_sail              Created                                                                  0.1s
+ ✔ Container jukeboxjoris-mysql-1         Started                                                                  0.7s
+ ✔ Container jukeboxjoris-meilisearch-1   Started                                                                  0.9s
+ ✔ Container jukeboxjoris-mailpit-1       Started                                                                  0.9s
+ ✔ Container jukeboxjoris-redis-1         Started                                                                  0.8s
+ ✔ Container jukeboxjoris-selenium-1      Started                                                                  0.7s
+ ✔ Container jukeboxjoris-laravel.test-1  Started                                                                  1.1s
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ./vendor/bin/sail shell
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+sail@56029e8b5f23:/var/www/html$ php artisan make:model Song -mf
+
+   ErrorException
+
+  file_put_contents(/var/www/html/app/Models/Song.php): Failed to open stream: Permission denied
+
+  at vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:204
+    200▕      * @return int|bool
+    201▕      */
+    202▕     public function put($path, $contents, $lock = false)
+    203▕     {
+  ➜ 204▕         return file_put_contents($path, $contents, $lock ? LOCK_EX : 0);
+    205▕     }
+    206▕
+    207▕     /**
+    208▕      * Write the contents of a file, replacing it atomically if it already exists.
+
+      +16 vendor frames
+
+  17  artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+sail@56029e8b5f23:/var/www/html$ exit
+exit
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ls -la ~/JukeBoxJoris/JukeBoxJoris/app
+total 20
+drwxr-xr-x  5 root root 4096 Aug 29 19:40 .
+drwxr-xr-x 12 root root 4096 Sep 15 11:07 ..
+drwxr-xr-x  3 root root 4096 Aug 29 19:40 Http
+drwxr-xr-x  3 root root 4096 Sep 17 14:57 Models
+drwxr-xr-x  2 root root 4096 Aug 29 19:40 Providers
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# chown -R 1000:1000 ~/JukeBoxJoris/JukeBoxJoris
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ls -la ~/JukeBoxJoris/JukeBoxJoris/app
+total 20
+drwxr-xr-x  5 1000 docker 4096 Aug 29 19:40 .
+drwxr-xr-x 12 1000 docker 4096 Sep 15 11:07 ..
+drwxr-xr-x  3 1000 docker 4096 Aug 29 19:40 Http
+drwxr-xr-x  3 1000 docker 4096 Sep 17 14:57 Models
+drwxr-xr-x  2 1000 docker 4096 Aug 29 19:40 Providers
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# cd ~/JukeBoxJoris/JukeBoxJoris
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ./vendor/bin/sail down
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+[+] Running 7/7
+ ✔ Container jukeboxjoris-laravel.test-1  Removed                                                                  0.6s
+ ✔ Container jukeboxjoris-mysql-1         Removed                                                                  1.2s
+ ✔ Container jukeboxjoris-meilisearch-1   Removed                                                                  0.4s
+ ✔ Container jukeboxjoris-redis-1         Removed                                                                  0.5s
+ ✔ Container jukeboxjoris-mailpit-1       Removed                                                                  0.9s
+ ✔ Container jukeboxjoris-selenium-1      Removed                                                                  4.9s
+ ✔ Network jukeboxjoris_sail              Removed                                                                  0.4s
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ./vendor/bin/sail up -d
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+[+] Running 7/7
+ ✔ Network jukeboxjoris_sail              Created                                                                  0.1s
+ ✔ Container jukeboxjoris-mysql-1         Started                                                                  0.6s
+ ✔ Container jukeboxjoris-redis-1         Started                                                                  0.7s
+ ✔ Container jukeboxjoris-mailpit-1       Started                                                                  0.8s
+ ✔ Container jukeboxjoris-selenium-1      Started                                                                  0.5s
+ ✔ Container jukeboxjoris-meilisearch-1   Started                                                                  0.8s
+ ✔ Container jukeboxjoris-laravel.test-1  Started                                                                  0.9s
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ./vendor/bin/sail shell
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+sail@6ff1c27abc65:/var/www/html$ php artisan make:model Song -mf
+
+   UnexpectedValueException
+
+  The stream or file "/var/www/html/storage/logs/laravel.log" could not be opened in append mode: Failed to open stream: Permission denied
+The exception occurred while attempting to log: file_put_contents(/var/www/html/app/Models/Song.php): Failed to open stream: Permission denied
+Context: {"exception":{}}
+
+  at vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:156
+    152▕             }
+    153▕             if (!\is_resource($stream)) {
+    154▕                 $this->stream = null;
+    155▕
+  ➜ 156▕                 throw new \UnexpectedValueException(sprintf('The stream or file "%s" could not be opened in append mode: '.$this->errorMessage, $url) . Utils::getRecordMessageForException($record));
+    157▕             }
+    158▕             stream_set_chunk_size($stream, $this->streamChunkSize);
+    159▕             $this->stream = $stream;
+    160▕         }
+
+      +12 vendor frames
+
+  13  artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+sail@6ff1c27abc65:/var/www/html$ cd ~/JukeBoxJoris/JukeBoxJoris
+bash: cd: /home/sail/JukeBoxJoris/JukeBoxJoris: No such file or directory
+sail@6ff1c27abc65:/var/www/html$ exit
+exit
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# cd ~/JukeBoxJoris/JukeBoxJoris
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# chown -R 1000:1000 storage bootstrap/cache
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ls -la storage
+total 20
+drwxrwxr-x  5 1000 docker 4096 Aug 29 19:40 .
+drwxr-xr-x 12 1000 docker 4096 Sep 15 11:07 ..
+drwxrwxr-x  4 1000 docker 4096 Aug 29 19:40 app
+drwxrwxr-x  6 1000 docker 4096 Aug 29 19:40 framework
+drwxrwxr-x  2 1000 docker 4096 Sep 15 11:18 logs
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ls -la bootstrap/cache
+total 40
+drwxrwxr-x 2 1000 docker  4096 Sep  9 11:32 .
+drwxr-xr-x 3 1000 docker  4096 Aug 29 19:40 ..
+-rwxrwxr-x 1 1000 docker    14 Aug 29 19:40 .gitignore
+-rwxrwxr-x 1 1000 docker   827 Sep  9 11:32 packages.php
+-rwxrwxr-x 1 1000 docker 21532 Sep  9 11:32 services.php
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ./vendor/bin/sail down
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+[+] Running 7/7
+ ✔ Container jukeboxjoris-laravel.test-1  Removed                                                                  0.9s
+ ✔ Container jukeboxjoris-meilisearch-1   Removed                                                                  0.4s
+ ✔ Container jukeboxjoris-selenium-1      Removed                                                                  4.4s
+ ✔ Container jukeboxjoris-mysql-1         Removed                                                                  1.8s
+ ✔ Container jukeboxjoris-mailpit-1       Removed                                                                  0.8s
+ ✔ Container jukeboxjoris-redis-1         Removed                                                                  0.5s
+ ✔ Network jukeboxjoris_sail              Removed                                                                  0.3s
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ./vendor/bin/sail up -d
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+[+] Running 7/7
+ ✔ Network jukeboxjoris_sail              Created                                                                  0.1s
+ ✔ Container jukeboxjoris-selenium-1      Started                                                                  0.7s
+ ✔ Container jukeboxjoris-meilisearch-1   Started                                                                  0.7s
+ ✔ Container jukeboxjoris-redis-1         Started                                                                  0.6s
+ ✔ Container jukeboxjoris-mailpit-1       Started                                                                  0.7s
+ ✔ Container jukeboxjoris-mysql-1         Started                                                                  0.7s
+ ✔ Container jukeboxjoris-laravel.test-1  Started                                                                  0.9s
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ./vendor/bin/sail shell
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+sail@2a35743df6c2:/var/www/html$ php artisan make:model Song -mf
+
+   UnexpectedValueException
+
+  The stream or file "/var/www/html/storage/logs/laravel.log" could not be opened in append mode: Failed to open stream: Permission denied
+The exception occurred while attempting to log: file_put_contents(/var/www/html/app/Models/Song.php): Failed to open stream: Permission denied
+Context: {"exception":{}}
+
+  at vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:156
+    152▕             }
+    153▕             if (!\is_resource($stream)) {
+    154▕                 $this->stream = null;
+    155▕
+  ➜ 156▕                 throw new \UnexpectedValueException(sprintf('The stream or file "%s" could not be opened in append mode: '.$this->errorMessage, $url) . Utils::getRecordMessageForException($record));
+    157▕             }
+    158▕             stream_set_chunk_size($stream, $this->streamChunkSize);
+    159▕             $this->stream = $stream;
+    160▕         }
+
+      +12 vendor frames
+
+  13  artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+sail@2a35743df6c2:/var/www/html$ exit
+exit
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# cd ~/JukeBoxJoris/JukeBoxJoris
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# chown -R 1000:1000 storage/logs
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# chmod -R 775 storage/logs
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ls -la storage/logs
+total 56
+drwxrwxr-x 2 1000 docker  4096 Sep 15 11:18 .
+drwxrwxr-x 5 1000 docker  4096 Aug 29 19:40 ..
+-rwxrwxr-x 1 1000 docker    14 Aug 29 19:40 .gitignore
+-rwxrwxr-x 1 1000 docker 37303 Sep 17 15:00 laravel.log
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ./vendor/bin/sail down
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+[+] Running 7/7
+ ✔ Container jukeboxjoris-laravel.test-1  Removed                                                                  1.1s
+ ✔ Container jukeboxjoris-redis-1         Removed                                                                  0.4s
+ ✔ Container jukeboxjoris-meilisearch-1   Removed                                                                  0.4s
+ ✔ Container jukeboxjoris-mailpit-1       Removed                                                                  0.7s
+ ✔ Container jukeboxjoris-selenium-1      Removed                                                                  4.6s
+ ✔ Container jukeboxjoris-mysql-1         Removed                                                                  1.9s
+ ✔ Network jukeboxjoris_sail              Removed                                                                  0.4s
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ./vendor/bin/sail up -d
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+[+] Running 7/7
+ ✔ Network jukeboxjoris_sail              Created                                                                  0.0s
+ ✔ Container jukeboxjoris-meilisearch-1   Started                                                                  0.8s
+ ✔ Container jukeboxjoris-mailpit-1       Started                                                                  0.7s
+ ✔ Container jukeboxjoris-mysql-1         Started                                                                  0.7s
+ ✔ Container jukeboxjoris-redis-1         Started                                                                  0.6s
+ ✔ Container jukeboxjoris-selenium-1      Started                                                                  0.6s
+ ✔ Container jukeboxjoris-laravel.test-1  Started                                                                  1.0s
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ./vendor/bin/sail shell
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+sail@dc823dd141a9:/var/www/html$ php artisan make:model Song -mf
+
+   UnexpectedValueException
+
+  The stream or file "/var/www/html/storage/logs/laravel.log" could not be opened in append mode: Failed to open stream: Permission denied
+The exception occurred while attempting to log: file_put_contents(/var/www/html/app/Models/Song.php): Failed to open stream: Permission denied
+Context: {"exception":{}}
+
+  at vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:156
+    152▕             }
+    153▕             if (!\is_resource($stream)) {
+    154▕                 $this->stream = null;
+    155▕
+  ➜ 156▕                 throw new \UnexpectedValueException(sprintf('The stream or file "%s" could not be opened in append mode: '.$this->errorMessage, $url) . Utils::getRecordMessageForException($record));
+    157▕             }
+    158▕             stream_set_chunk_size($stream, $this->streamChunkSize);
+    159▕             $this->stream = $stream;
+    160▕         }
+
+      +12 vendor frames
+
+  13  artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+sail@dc823dd141a9:/var/www/html$
