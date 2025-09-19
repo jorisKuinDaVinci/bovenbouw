@@ -1,0 +1,101 @@
+root@Jorisschool:~# cd ~/JukeBoxJoris/JukeBoxJoris
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ./vendor/bin/sail up -d
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+WARN[0000] The "MYSQL_EXTRA_OPTIONS" variable is not set. Defaulting to a blank string.
+[+] Running 7/7
+ ✔ Network jukeboxjoris_sail              Created                                                                  0.1s
+ ✔ Container jukeboxjoris-redis-1         Started                                                                  1.1s
+ ✔ Container jukeboxjoris-mailpit-1       Started                                                                  1.0s
+ ✔ Container jukeboxjoris-selenium-1      Started                                                                  0.9s
+ ✔ Container jukeboxjoris-mysql-1         Started                                                                  1.1s
+ ✔ Container jukeboxjoris-meilisearch-1   Started                                                                  1.0s
+ ✔ Container jukeboxjoris-laravel.test-1  Started                                                                  1.3s
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris# ./vendor/bin/sail
+Laravel Sail
+
+Usage:
+  sail COMMAND [options] [arguments]
+
+Unknown commands are passed to the docker-compose binary.
+
+docker-compose Commands:
+  sail up        Start the application
+  sail up -d     Start the application in the background
+  sail stop      Stop the application
+  sail restart   Restart the application
+  sail ps        Display the status of all containers
+
+Artisan Commands:
+  sail artisan ...          Run an Artisan command
+  sail artisan queue:work
+
+PHP Commands:
+  sail php ...   Run a snippet of PHP code
+  sail php -v
+
+Composer Commands:
+  sail composer ...                       Run a Composer command
+  sail composer require laravel/sanctum
+
+Node Commands:
+  sail node ...         Run a Node command
+  sail node --version
+
+NPM Commands:
+  sail npm ...        Run a npm command
+  sail npx            Run a npx command
+  sail npm run prod
+
+PNPM Commands:
+  sail pnpm ...        Run a pnpm command
+  sail pnpx            Run a pnpx command
+  sail pnpm run prod
+
+Yarn Commands:
+  sail yarn ...        Run a Yarn command
+  sail yarn run prod
+
+Bun Commands:
+  sail bun ...        Run a bun command
+  sail bunx           Run a bunx command
+  sail bun run prod
+
+Database Commands:
+  sail mysql     Start a MySQL CLI session within the 'mysql' container
+  sail mariadb   Start a MySQL CLI session within the 'mariadb' container
+  sail psql      Start a PostgreSQL CLI session within the 'pgsql' container
+  sail mongodb   Start a Mongo Shell session within the 'mongodb' container
+  sail redis     Start a Redis CLI session within the 'redis' container
+  sail valkey    Start a Valkey CLI session within the 'valkey' container
+
+Debugging:
+  sail debug ...          Run an Artisan command in debug mode
+  sail debug queue:work
+
+Running Tests:
+  sail test          Run the PHPUnit tests via the Artisan test command
+  sail phpunit ...   Run PHPUnit
+  sail pest ...      Run Pest
+  sail pint ...      Run Pint
+  sail dusk          Run the Dusk tests (Requires the laravel/dusk package)
+  sail dusk:fails    Re-run previously failed Dusk tests (Requires the laravel/dusk package)
+
+Container CLI:
+  sail shell        Start a shell session within the application container
+  sail bash         Alias for 'sail shell'
+  sail root-shell   Start a root shell session within the application container
+  sail root-bash    Alias for 'sail root-shell'
+  sail tinker       Start a new Laravel Tinker session
+
+Sharing:
+  sail share   Share the application publicly via a temporary URL
+  sail open    Open the site in your browser
+
+Binaries:
+  sail bin ...   Run Composer binary scripts from the vendor/bin directory
+  sail run ...   Run a command within the application container
+
+Customization:
+  sail artisan sail:publish   Publish the Sail configuration files
+  sail build --no-cache       Rebuild all of the Sail containers
+root@Jorisschool:~/JukeBoxJoris/JukeBoxJoris#
